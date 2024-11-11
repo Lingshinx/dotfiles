@@ -1,0 +1,232 @@
+@import "macchiato.css";
+
+/* Top */
+
+* {
+  min-height: 0px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+window {
+  background-color: shade(@base, 0.9);
+}
+
+.workspaces {
+  margin:0px;
+}
+
+.workspace.button {
+  color: @text;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  margin: 8px 4px;
+  box-shadow: none;
+  transition-duration: 0.4s;
+  background-color: transparent;
+  padding: 2px 10px;
+}
+
+.workspace.content{
+  color: @green;
+  margin-left: 8px;
+}
+
+.workspace.active {
+  border: 2px solid @blue;
+}
+
+.workspace:focus{
+  text-shadow:0px 0px 4px currentColor,0px 0px 5px shade(currentColor, 0.8);
+}
+
+.workspace:hover {
+  background-color: @text;
+  color: #1e1e2e;
+}
+
+.workspace.active:hover{
+  background-color: @blue
+}
+
+.workspace.empty {
+  color: @sapphire;
+}
+
+.workspace.empty:hover{
+  color: shade(currentColor, 0.8);
+}
+
+.workspace.icon {
+  color: @sky;
+  margin: 0px 0px 0px 20px;
+  font-size: 20px;
+  padding: 0px;
+}
+
+.tool {
+  margin:5px 0px 5px 5px;
+  background-color:transparent;
+  transition-duration:500ms;
+  box-shadow:none;
+  border-radius:0
+}
+
+.tool:focus{
+  text-shadow:0px 0px 4px currentColor,0px 0px 5px shade(currentColor, 0.8);
+}
+
+.tool.wifi {
+  color: @sky
+}
+
+.tool.disconnected{
+  color: @red;
+}
+
+.tool.connecting{
+  color: @teal;
+}
+
+.tool.wired{
+  color:@text;
+}
+
+.tool.clock {
+  color: #89b4fa;
+}
+
+.tool.tray {
+  margin: 10px 10px 8px 0px;
+}
+
+.tool.audio {
+  color: @lavender;
+  /*padding: 0px;*/
+}
+
+.tool.menu {
+  /*padding: 0;*/
+  color: @text;
+  margin-right: 10px;
+}
+
+.tool.memory {
+  color: #cba6f7;
+  margin-right: 10px;
+}
+
+.containerBar {
+  /*float:left;*/
+}
+
+.rightBar {
+
+}
+
+.tray-item {
+  background-color:transparent;
+  padding:5px;
+  border-radius:0px;
+  border-bottom: 2px solid @blue;
+  box-shadow:none;
+}
+
+.tray-item:focus{
+  border-color: @green;
+  box-shadow:0px 5px 4px -5px @sky
+}
+
+/* Right */
+
+.side-right {
+  min-width:2px;
+  padding: 25px 15px;
+  margin: 10px 10px;
+  background-color: @mantle;
+  border-radius:10px ;
+  border: 1px solid @text;
+  animation: 1s linear 1s;
+  /*box-shadow: -5px 0px 3px @mantle;*/
+}
+
+@keyframes slidein {
+  from {
+    /*-gtk-icon-transform: translateX(0%);*/
+    opacity: 0;
+  }
+  from {
+    opacity: 1;
+    /*-gtk-icon-transform: translateX(100%);*/
+  }
+}
+
+.timeRow-button{
+  font-weight:normal;
+  background-color:transparent;
+  margin-left: 6px;
+  color: @text;
+  border-radius: 50%;
+  padding:2px 5px;
+  box-shadow:none;
+  transition-duration:500ms;
+}
+
+.timeRow-button:focus{
+  text-shadow:0px 0px 4px currentColor,0px 0px 5px shade(currentColor, 0.8);
+}
+
+.timeRow-button:hover{
+  color: white;
+}
+
+.power{
+  color: @red;
+}
+
+.power:hover {
+  background-color:shade(@red,0.8);
+}
+
+.setting {
+  color:@yellow
+}
+
+.setting:hover {
+  background-color:shade(@yellow,0.8);
+}
+
+.reload {
+  color: @green;
+}
+
+.reload:hover  {
+  background-color:shade(@green, 0.8);
+}
+
+.timeRow-text{
+ color:@text;
+}
+
+
+.timeRow-avatar{
+  background-image:url('/home/lingshin/Pictures/Arknights/嵯峨——quan.jpg');
+  padding:35px;
+  margin-right: 15px;
+  border-radius:50%;
+  border:2px solid ;
+  background-size:cover;
+}
+
+.top-name {
+  color :@text;
+  font-size:1.5rem;
+}
+
+.seperator {
+  background-color:white;
+  margin: 25px 0;
+  min-height:1px;
+  background-image:linear-gradient(to left,@mantle,@surface0,@subtext0,@surface0,@mantle)
+}
+
