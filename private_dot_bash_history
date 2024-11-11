@@ -1,0 +1,250 @@
+sudo vim
+sudo
+vim /etc/sudoers 
+ls
+rm q
+ls
+sudo
+su root
+exit
+ls
+cd ~
+ls
+ls
+ll
+cd ..
+ls
+cd lingshin/
+sudo vim
+sudo
+sudo
+ll
+su root
+exit
+sudo vim /etc/sudoers
+cls
+ll
+vim /etc/hostname
+sudo echo swing > /etc/hostname
+sudo (echo swing > /etc/hostname)
+sudo vim /etc/hostname
+vim /etc/host
+cd etc/
+ls
+vim /etc/hosts
+ls
+sudo mv ~/hosts hosts
+cat host
+ls
+cat hosts
+pacman -S intel-ucode
+sudo pacman -S intel-ucode
+pacman -S grub efibootmgr os-prober
+sudo pacman -S grub efibootmgr os-prober
+grub-install --target=x86_64-efi
+sudo grub-install --target=x86_64-efia
+sudo grub-install --target=x86_64-efi
+exit
+sudo ls
+sudo ls
+sudo vim
+ps
+ps
+l
+ls
+zsh
+ps
+ps
+exit
+sudo
+sudo ls
+sudo ls
+sudo ls
+sudo ls
+Hyprland
+Hyprland
+sudo Hyprland
+ls
+cd ~
+ls
+ls
+ls -a
+mkdir .runtime
+cd .runtime/
+cd ..
+chmod 700 .runtime/
+ls
+cd .runtime/
+ls
+sudo Hyprland
+export XDG_RUNTIME_DIR=/home/lingshin/.runtime/
+export RUNLEVEL=3
+source /etc/profile
+sudo Hyprland
+set XDG_RUNTIME_DIR=/home/lingshin/.runtime/
+sudo Hyprland
+ls
+cd ..
+ls
+set XDG_RUNTIME_DIR=/home/lingshin/.runtime/
+sudo Hyprland
+ll 
+ll
+zsh
+ls
+Hyprland
+Hyprland
+sudo pacman -S sddm
+systmctl enable sddm
+systmctl
+systemctl enable sdd
+sudo systemctl enable sdd
+sudo systemctl enable sddm
+sudo systemctl start sddm
+pacman -S plasa konsole dolphin ark gwenview
+sudo pacman -S plasma konsole dolphin ark gwenview
+systemctl enable NetworkManager
+sudo systemctl enable NetworkManager
+exit
+Hyprland 
+sudo Hyprland
+sudo Hyprland
+sudo Hyprland
+sudo vim
+youngu
+sodu
+sodu ls
+sudo ls
+sudo ls
+ls
+sudo
+sodu l
+sudo l
+su root
+su root
+exit
+sudo pacman -S bluez bluez-utils bluedevil
+systemctl enable bluetooth
+systemctl enable bluetooth
+systemctl enable bluetooth
+shutdown -h now
+systemctl status bluetooth
+systemctl status bluetooth,service
+sudo systemctl status bluetooth,service
+sudo systemctl status bluetooth.service
+bluetoothctl
+hello
+zsh
+exit
+ls
+ll
+zsh
+sddm
+exit
+sudo pacman -Ss kirigami
+sudo pacman -Ss kirigami
+microsoft-edge-stable 
+vim .config/hypr/hyprland.conf
+vim /etc/locale.gen
+vim /etc/locale.conf
+vim /etc/locale.conf
+sudo vim /etc/locale.conf 
+pacman -S wqy-zenhei
+sudo pacman -S wqy-zenhei
+rofi
+rofi show run
+rofi -show run
+sudo vim /home/lingshin/.config/hypr/hyprland.conf 
+microsoft-edge-stable 
+microsoft-edge-stable 7
+microsoft-edge-stable &
+microsoft-edge-stable &
+sudo vim /usr/lib/sddm/sddm.conf.d/default.conf 
+vim /etc/environment 
+sudo vim /etc/environment 
+reboot
+yay -Ss waybar
+yay -Ss waybar-hyprland
+yay -Ss waybar-hypr
+yay -Ss waybar-
+yay -Ss waybar- | more
+yay -Ss waybar- | more
+yay -Ss waybar-hyprland
+yay -S waybar-hyprland
+vim /etc/pacman.conf 
+vim /etc/pacman.conf 
+sudo vim /etc/pacman.conf 
+yay -S paru
+paru -Ss wayland-hyprland
+paru -S wayland-hyprland
+paru -S waybar-hyprland
+pacman -Suyy
+sudo pacman -Suyy
+paru -S waybar-hyprland
+paru -S waybar
+waybar
+waybar &
+waybar &
+vim ~/.vimrc
+vim ~/.vimrc
+paru -Ss rofi
+paru -Ss rofi-lbonn
+paru -Ss rofi-lbonn-wayland-only
+paru -S rofi-lbonn-wayland-only-git
+paru -S rofi-lbonn-wayland-only-git
+yay -S base-devel
+gcc
+paru -S rofi-lbonn-wayland-only-git
+rofi
+rofi -show windows
+rofi -show window
+yay -Ss edge
+yay -Ss microsoft-edge
+yay -S microsoft-edge-stable
+edge
+microsoft-edge-stable 
+microsoft-edge-stable 
+yay -Ss chrome
+iwctl
+networkctl
+yay -S firefox
+networkmanager
+networkctl
+nmcli 
+nmtui
+exit
+exit
+firefox
+yay -Sj firefox-i18n-zh-cn
+yay -S firefox-i18n-zh-cn
+firefox
+vim /etc/locale.conf 
+vim /etc/locale.gen 
+yay -S dislocker
+yay -S dislocker
+paru -S dislocker
+microsoft-edge-stable 
+sudo grub-mkconfig -o /boot/grub/grub.cfg 
+yay -S dislocker
+yay -S dislocker
+dislocker
+sudo grub-mkconfig -o /boot/grub/grub.cfg 
+reboot
+ls
+cd .oh-my-zsh/
+ls
+ls
+ls -a
+ls -a
+ls
+ls -a
+cd ..
+rm -rf .oh-my-zsh/
+ls
+zsh
+zsh
+exit
+ls
+ssh pan@100.102.98.7
+ssh pan@100.102.98.7
+exit
