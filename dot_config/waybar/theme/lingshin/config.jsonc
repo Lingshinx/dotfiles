@@ -1,0 +1,135 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 32,
+  "spacing": 4,
+  "exclusive": true,
+  "gtk-layer-shell": true,
+  "passthrough": false,
+  "fixed-center": true,
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+  "modules-center": [
+    "custom/spotify"
+  ],
+  "modules-right": [
+    "cpu",
+    "memory",
+    "network",
+    "pulseaudio",
+    "tray",
+    "clock#simpleclock",
+    "custom/power"
+    // "user"
+  ],
+  "custom/spotify": {
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl -p spotify play-pause",
+    "on-click-right": "spotifatius toggle-liked",
+    "on-click-middle": "playerctl -p spotify next",
+    "exec": "spotifatius monitor",
+  },
+  "wlr/workspaces": {
+    "on-click": "activate",
+    "format": "{name}",
+    "all-outputs": true,
+    "disable-scroll": false,
+    "active-only": false,
+  },
+  "hyprland/workspaces": {
+    "show-special": true,
+    "sort-by-coordinate": true,
+    "all-outputs": true,
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "5": "",
+      "default": ""
+    },
+    "persistent-workspaces": {
+      "1": [], // Always show a workspace with name '1', on all outputs if it does not exists
+      "2": [],
+      "3": [],
+      "4": [],
+      // "4": ["eDP-1"], // Always show a workspace with name '4', on output 'eDP-1' if it does not exists
+      // "5": ["eDP-1", "DP-2"] // Always show a workspace with name '5', on outputs 'eDP-1' and 'DP-2' if it does not exists
+    },
+  },
+  "tray": {
+    "show-passive-items": true,
+    "spacing": 10,
+  },
+  "clock#simpleclock": {
+    "tooltip": true,
+    "format": " {:%H:%M}",
+    "tooltip-format": "  {:%a,%d %b}"
+  },
+  "clock": {
+    "format": " {:%Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+  },
+  "cpu": {
+    "format": " {usage}%",
+    "tooltip": true,
+    "interval": 1,
+  },
+  "memory": {
+    "format": " {used:0.2f}G",
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": " muted",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "󰂑",
+      "headset": "󰂑",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ],
+    },
+    "on-click": "pavucontrol",
+  },
+  "custom/logo": {
+    "format": " ",
+    "tooltip": false,
+  },
+  "custom/sep": {
+    "format": "|",
+    "tooltip": false,
+  },
+  "custom/power": {
+    "tooltip": false,
+    "on-click": "hyprctl dispatch exit",
+    "format": "⏻ ",
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": " {signalStrength}%",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "⚠  Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+  "user": {
+    "format": "{user}",
+    "interval": 60,
+    "height": 30,
+    "width": 30,
+    "icon": true,
+    "avatar": "~/Pictures/Arknights/迷迭香——quan.jpg",
+  }
+}

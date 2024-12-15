@@ -6,6 +6,8 @@ vim.keymap.set("i", "jk", "<Esc>", { desc = "which_key_ignore" })
 vim.keymap.set("n", "dm", "<cmd>delm!<CR>")
 vim.keymap.set("n", "<UP>", "<C-u>")
 vim.keymap.set("n", "<Down>", "<C-d>")
+vim.keymap.set("n", "<Left>", "<Home>")
+vim.keymap.set("n", "<Right>", "<End>")
 vim.keymap.set("n", "<BS>", "@@")
 vim.keymap.set("n", "<leader>ch", "<cmd>cd %:h<CR>")
 vim.keymap.set("n", "<C-/>", function()
@@ -17,13 +19,13 @@ vim.keymap.set("n", "<C-/>", function()
     border = "solid",
   })
 end, { desc = "LazyTerm" })
--- vim.keymap.set("i", "<C-;>", function()
---   vim.notify(string.format("IM is %s", require("cmp_im").toggle() and "enabled" or "disabled"))
--- end)
---
+
 vim.keymap.set({ "i", "c" }, "<C-S-V>", '<C-r>"')
 vim.keymap.set({ "i", "c" }, "<C-BS>", "<C-w>")
 vim.keymap.set("i", "<C-CR>", "<End><CR>")
+
+vim.keymap.set("t", "<esc><esc>", "<cmd>stopinsert<CR>", { desc = "which_key_ignore" })
+
 -- vim.keymap.del("t", "<C-h>")
 -- vim.keymap.del("t", "<C-j>")
 -- vim.keymap.del("t", "<C-k>")
