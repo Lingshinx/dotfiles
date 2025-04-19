@@ -1,0 +1,81 @@
+/* #CDD6F4 */
+/* #CDD6F4 */
+/* #C7D4EF */
+
+* {
+  background-image: none;
+  box-shadow: none;
+}
+
+window {
+  background-color: rgba(12, 12, 12, 0.4);
+}
+
+button {
+  margin: 10 10;
+  border-radius: 40;
+  color: #CDD6F4;
+  background-color: rgba(0, 0, 12, 0.1);
+  background-repeat: no-repeat;
+  background-size: 18%;
+  font-family: JetBrains Mono;
+  font-weight: normal;
+  font-size: 1.4rem;
+}
+
+/* button:focus, */
+/* button:active, */
+button:hover {
+  transition-duration: 300ms;
+  background-color: #CDD6F4;
+  outline-style: none;
+  color: #11111B;
+}
+
+#back {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/back-light.svg"));
+}
+
+#back:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/back-dark.svg"));
+}
+
+#windows {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/windows-light.svg"));
+}
+
+#windows:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/windows-dark.svg"));
+}
+
+#exit {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/exit-light.svg"));
+}
+
+#exit:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/exit-dark.svg"));
+}
+
+#lock {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/lock-light.svg"));
+}
+
+#lock:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/lock-dark.svg"));
+}
+
+#shutdown {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/shutdown-light.svg"));
+}
+
+#shutdown:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/shutdown-dark.svg"));
+}
+
+#reboot {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/reboot-light.svg"));
+}
+
+#reboot:hover {
+  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/reboot-dark.svg"));
+}

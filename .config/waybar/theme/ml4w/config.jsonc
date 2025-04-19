@@ -1,0 +1,33 @@
+{
+  "layer": "top",
+  "margin-top": 10,
+  "margin-bottom": 0,
+  "margin-left": 14,
+  "margin-right": 14,
+  "spacing": 0,
+  "include": [
+    "~/.config/waybar/monitor.jsonc",
+    "~/.config/waybar/modules.jsonc"
+  ],
+  "modules-left": [
+    "custom/appmenu",
+    "group/links",
+    "group/quicklinks",
+    "hyprland/window",
+    "custom/empty"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "custom/updates",
+    "pulseaudio",
+    "battery",
+    "network",
+    "group/hardware",
+    "group/tools",
+    "tray",
+    "custom/exit",
+    "clock"
+  ]
+}

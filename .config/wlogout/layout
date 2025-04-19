@@ -1,0 +1,36 @@
+{
+    "label" : "back",
+    "action" : "systemctl suspend",
+    "text" : "[B]ack",
+    "keybind" : "B"
+}
+{
+    "label" : "shutdown",
+    "action" : "systemctl poweroff",
+    "text" : "[S]hutdown",
+    "keybind" : "s"
+}
+{
+    "label" : "windows",
+    "action" : "/home/lingshin/Desktop/Application/bin/chwin",
+    "text" : "[W]indows",
+    "keybind" : "w"
+}
+{
+    "label" : "lock",
+    "action" : "loginctl lock-session",
+    "text" : "[L]ock",
+    "keybind" : "l"
+}
+{
+    "label" : "exit",
+    "action" : "hyprland dispatch exit",
+    "text" : "[E]xit",
+    "keybind" : "e"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "[R]eboot",
+    "keybind" : "r"
+}

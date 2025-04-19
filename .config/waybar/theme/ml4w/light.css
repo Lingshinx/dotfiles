@@ -1,0 +1,43 @@
+@define-color foreground #383a42;
+@define-color background #fafafa;
+@define-color cursor #a3b3cc;
+
+@define-color color0 #383a42;
+@define-color color1 #0184bc;
+@define-color color2 #50a14f;
+@define-color color3 #c18401;
+@define-color color4 #0184bc;
+@define-color color5 #0997b3;
+@define-color color6 #0997b3;
+@define-color color7 #fafafa;
+@define-color color8 #beceff;
+@define-color color9 #e45649;
+@define-color color10 #50a14f;
+@define-color color11 #c18401;
+@define-color color12 #0184bc;
+@define-color color13 #a626a4;
+@define-color color14 #0997b3;
+@define-color color15 #fafafa;
+
+@define-color text @color0;
+@define-color backgroundlight @color7;
+@define-color backgrounddark @color4;
+@define-color workspaces @color7;
+@define-color workspacesbackground1 @color7;
+@define-color workspacesbackground2 @color6;
+@define-color bordercolor @color7;
+@define-color textcolor1 @color7;
+@define-color textcolor2 @color14;
+@define-color textcolor3 @color7;
+@define-color iconcolor @color7;
+@define-color audio @color5;
+@define-color audio-b @color7;
+@define-color window @color2;
+@define-color network @color1;
+@define-color network-b @color7;
+@define-color exit @color7;
+@define-color clock @color7;
+@define-color workspaces-border @text;
+@define-color active @color7;
+
+@import './base.css';

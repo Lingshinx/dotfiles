@@ -1,0 +1,20 @@
+@import './theme/lingshin/macchiato.css';
+
+@define-color workspacesbackground1 @base;
+@define-color workspacesbackground2 @text;
+@define-color workspaces @base;
+@define-color iconcolor @text;
+@define-color backgroundlight @base;
+@define-color backgrounddark @crust;
+@define-color audio @lavender;
+@define-color audio-b @base;
+@define-color network @sky;
+@define-color network-b @base;
+@define-color exit @text;
+@define-color exit-b @base;
+@define-color window @green;
+@define-color bordercolor @text;
+@define-color clock @blue;
+@define-color active @base;
+
+@import './base.css';
