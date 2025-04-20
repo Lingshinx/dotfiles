@@ -1,8 +1,8 @@
 {
     "label" : "back",
-    "action" : "systemctl suspend",
+    "action" : "",
     "text" : "[B]ack",
-    "keybind" : "B"
+    "keybind" : "b"
 }
 {
     "label" : "shutdown",
@@ -24,7 +24,7 @@
 }
 {
     "label" : "exit",
-    "action" : "hyprland dispatch exit",
+    "action" : "hyprctl dispatch exit",
     "text" : "[E]xit",
     "keybind" : "e"
 }

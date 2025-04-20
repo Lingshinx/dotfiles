@@ -3,6 +3,7 @@
 /* #C7D4EF */
 
 * {
+  font-family: JetBrains Mono;
   background-image: none;
   box-shadow: none;
 }
@@ -12,19 +13,23 @@ window {
 }
 
 button {
-  margin: 10 10;
-  border-radius: 40;
+  margin: 15px;
+  border-radius: 50px;
   color: #CDD6F4;
   background-color: rgba(0, 0, 12, 0.1);
   background-repeat: no-repeat;
-  background-size: 18%;
-  font-family: JetBrains Mono;
+  background-size: 15%;
   font-weight: normal;
   font-size: 1.4rem;
 }
 
 /* button:focus, */
 /* button:active, */
+button:focus {
+  transition-duration: 300ms;
+  color: #7DCFFF;
+}
+
 button:hover {
   transition-duration: 300ms;
   background-color: #CDD6F4;
