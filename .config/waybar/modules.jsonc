@@ -16,7 +16,7 @@
       "1": [], // Always show a workspace with name '1', on all outputs if it does not exists
       "2": [],
       "3": [],
-      "4": [],
+      "4": []
     }
   },
   // Taskbar
@@ -49,22 +49,6 @@
     },
     "separate-outputs": true
   },
-  // ML4W Welcome App
-  "custom/ml4w-welcome": {
-    "on-click": "sleep 0.1 && ~/.config/ml4w/settings/ml4w-sidebar.sh",
-    "on-click-right": "sleep 0.1 && com.ml4w.welcome",
-    "format": " ",
-    "tooltip-format": "Open Sidebar"
-  },
-  // Empty
-  "custom/empty": {
-    "format": ""
-  },
-  // Tools
-  "custom/tools": {
-    "format": "",
-    "tooltip-format": "Tools"
-  },
   // Cliphist
   "custom/cliphist": {
     "format": "",
@@ -78,35 +62,8 @@
     "format": "  {}",
     "escape": true,
     "return-type": "json",
-    "exec": "~/.config/ml4w/scripts/updates.sh",
-    "interval": 1800,
-    "on-click": "$(cat ~/.config/ml4w/settings/terminal.sh) --class dotfiles-floating -e ~/.config/ml4w/scripts/installupdates.sh",
-    "on-click-right": "~/.config/ml4w/settings/software.sh"
-  },
-  // Wallpaper
-  "custom/wallpaper": {
-    "format": "",
-    "on-click": "waypaper",
-    "on-click-right": "~/.config/hypr/scripts/wallpaper-effects.sh",
-    "tooltip-format": "Left: Select a wallpaper\nRight: Select wallpaper effect"
-  },
-  // Waybar Themes
-  "custom/waybarthemes": {
-    "format": "",
-    "on-click": "~/.config/waybar/themeswitcher.sh",
-    "tooltip-format": "Select a waybar theme"
-  },
-  // Settings
-  "custom/settings": {
-    "format": "",
-    "on-click": "sleep 0.1 && com.ml4w.dotfilessettings",
-    "tooltip-format": "ML4W Dotfiles Settings"
-  },
-  // Keybindings
-  "custom/keybindings": {
-    "format": "",
-    "on-click": "~/.config/hypr/scripts/keybindings.sh",
-    "tooltip": false
+    "exec": "~/.config/waybar/scripts/updates.sh",
+    "interval": 1800
   },
   // ChatGPT Launcher
   "custom/chatgpt": {
@@ -114,38 +71,15 @@
     "on-click": "~/.config/ml4w/settings/ai.sh",
     "tooltip-format": "AI Support"
   },
-  // Calculator
-  "custom/calculator": {
-    "format": "",
-    "on-click": "qalculate-gtk",
-    "tooltip-format": "Open calculator"
-  },
-  // Windows VM
-  "custom/windowsvm": {
-    "format": "",
-    "on-click": "~/.config/ml4w/scripts/launchvm.sh",
-    "tooltip": false
-  },
   // Rofi Application Launcher
   "custom/appmenu": {
-    // START APPS LABEL
     "format": "Apps",
-    // END APPS LABEL
-    "on-click": "sleep 0.2;pkill rofi || rofi -show drun -replace",
-    "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
-    "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
-  },
-  // Rofi Application Launcher
-  "custom/appmenuicon": {
-    "format": "",
-    "on-click": "sleep 0.2;rofi -show drun -replace",
-    "on-click-right": "~/.config/hypr/scripts/keybindings.sh",
-    "tooltip-format": "Left: Open the application launcher\nRight: Show all keybindings"
+    "on-click": "anyrun",
   },
   // Power Menu
   "custom/exit": {
     "format": "",
-    "on-click": "~/.config/ml4w/scripts/wlogout.sh",
+    "on-click": "wlogout",
     "tooltip-format": "Power Menu"
   },
   // Hyprshade
@@ -166,16 +100,6 @@
     "on-click": "~/.config/hypr/scripts/hypridle.sh toggle",
     "on-click-right": "hyprlock"
   },
-  // Keyboard State
-  "keyboard-state": {
-    "numlock": true,
-    "capslock": true,
-    "format": "{name} {icon}",
-    "format-icons": {
-      "locked": "",
-      "unlocked": ""
-    }
-  },
   // System tray
   "tray": {
     "icon-size": 21,
@@ -184,7 +108,7 @@
   // Clock
   "clock": {
     "format": "{:%H:%M - %A}",
-    "on-click": "ags toggle calendar",
+    "on-click": "swaync-client -t",
     "timezone": "",
     "tooltip": false
   },
