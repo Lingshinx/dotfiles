@@ -25,6 +25,7 @@
 @define-color workspaces @color7;
 @define-color workspacesbackground1 @color7;
 @define-color workspacesbackground2 @color6;
+@define-color workspacesbackground_urgent @color9;
 @define-color bordercolor @color7;
 @define-color textcolor1 @color7;
 @define-color textcolor2 @color14;

@@ -19,6 +19,12 @@
       "4": []
     }
   },
+  // SubMap
+  "hyprland/submap": {
+    "default-submap": "Arch",
+    "on-click": "anyrun",
+    "always-on": true
+  },
   // Taskbar
   "wlr/taskbar": {
     "format": "{icon}",
@@ -41,13 +47,9 @@
   // Hyprland Window
   "hyprland/window": {
     "rewrite": {
-      "(.*) - Brave": "$1",
-      "(.*) - Chromium": "$1",
-      "(.*) - Brave Search": "$1",
-      "(.*) - Outlook": "$1",
-      "(.*) Microsoft Teams": "$1"
+      "(.*) — Zen Browser": "$1"
     },
-    "separate-outputs": true
+    "separate-outputs": false
   },
   // Cliphist
   "custom/cliphist": {
@@ -59,7 +61,7 @@
   },
   // Updates Count
   "custom/updates": {
-    "format": "  {}",
+    "format": "{}",
     "escape": true,
     "return-type": "json",
     "exec": "~/.config/waybar/scripts/updates.sh",
@@ -70,11 +72,6 @@
     "format": " ",
     "on-click": "~/.config/ml4w/settings/ai.sh",
     "tooltip-format": "AI Support"
-  },
-  // Rofi Application Launcher
-  "custom/appmenu": {
-    "format": "Apps",
-    "on-click": "anyrun",
   },
   // Power Menu
   "custom/exit": {
@@ -88,17 +85,6 @@
     "tooltip-format": "Toggle Screen Shader",
     "on-click": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh",
     "on-click-right": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh rofi"
-  },
-  // Hypridle inhibitor
-  "custom/hypridle": {
-    "format": "",
-    "return-type": "json",
-    "escape": true,
-    "exec-on-event": true,
-    "interval": 60,
-    "exec": "~/.config/hypr/scripts/hypridle.sh status",
-    "on-click": "~/.config/hypr/scripts/hypridle.sh toggle",
-    "on-click-right": "hyprlock"
   },
   // System tray
   "tray": {
@@ -199,7 +185,7 @@
     "tooltip-format": " {ifname} via {gwaddri}",
     "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    "tooltip-format-disconnected": "Disconnected",
+    "tooltip-format-disconnected": "󰪎 ",
     "max-length": 50,
     "on-click": "~/.config/ml4w/settings/networkmanager.sh",
     "on-click-right": "~/.config/ml4w/scripts/nm-applet.sh toggle",

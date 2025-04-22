@@ -50,6 +50,10 @@ window#waybar {
   opacity: 1.0;
 }
 
+#workspaces button.urgent {
+  background: @workspacesbackground_urgent;
+}
+
 #workspaces button:hover {
   color: @textcolor1;
   background: @workspacesbackground2;
@@ -238,7 +242,7 @@ window#waybar.empty #window {
  * Custom Modules
  * ----------------------------------------------------- */
 
-#custom-appmenu {
+#submap {
   background-color: @backgrounddark;
   font-size: 16px;
   color: @textcolor1;
@@ -247,6 +251,20 @@ window#waybar.empty #window {
   margin: 3px 17px 3px 0px;
   opacity: 0.8;
   border: 3px solid @bordercolor;
+  transition-duration: 0.3s;
+}
+
+#submap.Resize {
+  background-color: #946EDE;
+}
+
+#submap.Ignore {
+  background-color: #DD88D7;
+
+}
+
+#submap.Group {
+  background-color: #DD88D7;
 }
 
 /* -----------------------------------------------------

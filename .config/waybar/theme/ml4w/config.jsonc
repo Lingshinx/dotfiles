@@ -10,7 +10,7 @@
     "~/.config/waybar/modules.jsonc"
   ],
   "modules-left": [
-    "custom/appmenu",
+    "hyprland/submap",
     "group/links",
     "group/quicklinks",
     "hyprland/window",

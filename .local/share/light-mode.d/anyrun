@@ -1,0 +1,4 @@
+#!/bin/bash
+
+anyrun_dir=/home/lingshin/.config/anyrun
+ln -s $anyrun_dir/style-light.css $anyrun_dir/style.css -f

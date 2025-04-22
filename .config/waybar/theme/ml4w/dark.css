@@ -2,6 +2,7 @@
 
 @define-color workspacesbackground1 @base;
 @define-color workspacesbackground2 @text;
+@define-color workspacesbackground_urgent @maroon;
 @define-color workspaces @base;
 @define-color iconcolor @text;
 @define-color backgroundlight @base;
@@ -16,5 +17,6 @@
 @define-color bordercolor @text;
 @define-color clock @blue;
 @define-color active @base;
+@define-color textcolor2 @teal;
 
 @import './base.css';

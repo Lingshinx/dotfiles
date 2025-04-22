@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sway_dir=/home/lingshin/.config/swaync
+ln -s $sway_dir/dark.css $sway_dir/color.css -f
+swaync-client -rs
