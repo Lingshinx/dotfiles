@@ -6,13 +6,15 @@
   "margin-right": 14,
   "spacing": 0,
   "include": [
-    "~/.config/waybar/monitor.jsonc",
-    "~/.config/waybar/modules.jsonc"
+    "~/.config/waybar/theme/ml4w/modules.jsonc",
+    "~/.config/waybar/monitor.jsonc"
   ],
   "modules-left": [
     "hyprland/submap",
-    "group/links",
-    "group/quicklinks",
+    // "group/links",
+    // "wlr/taskbar",
+    // "group/quicklinks",
+    "custom/chatgpt",
     "hyprland/window",
     "custom/empty"
   ],

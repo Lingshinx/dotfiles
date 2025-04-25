@@ -78,11 +78,21 @@
   },
   "cpu": {
     "format": " {usage}%",
-    "tooltip": true,
-    "interval": 1,
+    "tooltip": true
   },
   "memory": {
     "format": " {used:0.2f}G",
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{icon} {temperatureC}°C",
+    "format-critical": "{temperatureC}°C",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

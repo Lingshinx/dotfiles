@@ -42,7 +42,7 @@ window#waybar.hidden {
 }
 
 #workspaces button.active:hover {
-  background-color:@blue
+  background-color: @blue
 }
 
 #workspaces button.urgent {
@@ -90,6 +90,7 @@ window#waybar.hidden {
 #custom-spotify.liked {
   color: @yellow;
 }
+
 #custom-spotify.added {
   color: #cba6f7;
 }

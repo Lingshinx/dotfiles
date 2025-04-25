@@ -17,6 +17,7 @@
 @define-color bordercolor @text;
 @define-color clock @blue;
 @define-color active @base;
+@define-color textcolor1 @text;
 @define-color textcolor2 @teal;
 
 @import './base.css';

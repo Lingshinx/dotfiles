@@ -55,7 +55,6 @@ window#waybar {
 }
 
 #workspaces button:hover {
-  color: @textcolor1;
   background: @workspacesbackground2;
   border-radius: 15px;
   opacity: 0.7;
@@ -314,15 +313,19 @@ window#waybar.empty #window {
 #disk,
 #memory,
 #cpu,
-#language {
-  margin: 0px;
+#temperature {
+  margin-left: 10px;
   padding: 0px;
   font-size: 16px;
   color: @iconcolor;
 }
 
-#language {
-  margin-right: 10px;
+#temperature {
+  margin-right: 15px;
+}
+
+#temperature.critical {
+  color: @red;
 }
 
 /* -----------------------------------------------------
