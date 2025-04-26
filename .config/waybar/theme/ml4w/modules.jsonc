@@ -96,7 +96,8 @@
   // System
   "custom/system": {
     "format": "",
-    "tooltip": false
+    "tooltip": false,
+    "on-click": "~/.local/share/swww/scripts/init.sh"
   },
   // CPU
   "cpu": {
