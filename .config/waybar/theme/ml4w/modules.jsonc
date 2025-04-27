@@ -40,14 +40,6 @@
     "max-length": 60,
     "separate-outputs": false
   },
-  // Cliphist
-  "custom/cliphist": {
-    "format": "",
-    "on-click": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh",
-    "on-click-right": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh d",
-    "on-click-middle": "sleep 0.1 && ~/.config/ml4w/scripts/cliphist.sh w",
-    "tooltip-format": "Left: Open clipboard Manager\nRight: Delete an entry\nMiddle: Clear list"
-  },
   // Updates Count
   "custom/updates": {
     "format": "{}",
@@ -58,7 +50,7 @@
     "interval": 1800
   },
   // ChatGPT Launcher
-  "custom/chatgpt": {
+  "custom/fortune": {
     "format": " ",
     "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
     "on-click-right": "~/.config/waybar/scripts/fortune/record.sh",
@@ -213,14 +205,5 @@
     },
     "on-click": "pamixer -t",
     "on-click-right": "blueberry"
-  },
-  // Bluetooth
-  "bluetooth": {
-    "format": " {status}",
-    "format-disabled": "",
-    "format-off": "",
-    "interval": 30,
-    "on-click": "blueman-manager",
-    "format-no-controller": ""
   }
 }

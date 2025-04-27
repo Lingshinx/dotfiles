@@ -1,2 +1,4 @@
-swww img --transition-fps 60 -t grow ~/Pictures/wallpaper/chensir.jpeg -o eDP-1
-swww img --transition-fps 60 -t grow ~/Pictures/wallpaper/blue-archive-siroko.png -o HDMI-A-1
+monitors=$(hyprctl monitors -j | jq -r '.[] | .name')
+echo "$monitors" | while read -r line; do
+  swww img --transition-fps 60 -t grow ~/.config/lingshin/wallpaper/"$line".png -o "line"
+done

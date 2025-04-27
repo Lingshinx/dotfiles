@@ -11,10 +11,7 @@
   ],
   "modules-left": [
     "hyprland/submap",
-    // "group/links",
-    // "wlr/taskbar",
-    // "group/quicklinks",
-    "custom/chatgpt",
+    "custom/fortune",
     "hyprland/window",
     "custom/empty"
   ],
