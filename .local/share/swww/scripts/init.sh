@@ -1,6 +1,2 @@
-wallpapers=$(find ~/Pictures/wallpaper/blue -type f | shuf -n 1)
-
-alias getPos='~/.local/share/swww/scripts/cursor.js'
-alias swww='swww img --transition-fps 60 -t grow'
-
-swww "$wallpapers" $(getPos)
+swww img --transition-fps 60 -t grow ~/Pictures/wallpaper/chensir.jpeg -o eDP-1
+swww img --transition-fps 60 -t grow ~/Pictures/wallpaper/blue-archive-siroko.png -o HDMI-A-1
