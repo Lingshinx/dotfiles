@@ -12,7 +12,7 @@
 }
 {
     "label" : "windows",
-    "action" : "~/Desktop/Application/bin/chwin",
+    "action" : "~/.config/lingshin/scripts/chwin",
     "text" : "[W]indows",
     "keybind" : "w"
 }
