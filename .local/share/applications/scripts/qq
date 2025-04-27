@@ -1,0 +1,19 @@
+#!/bin/bash
+
+items=$(busctl --user \
+  get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher \
+  org.kde.StatusNotifierWatcher \
+  RegisteredStatusNotifierItems | sed 's/as [0-9]\+ //g' | tr -d '"' | tr ' ' '\n' | cut -d'/' -f1)
+
+qqs=$(busctl --user list | rg qq | awk '{print $1}')
+
+dest=$(comm -12 <(echo "$qqs" | sort) <(echo "$items" | sort))
+
+if [ -n "$dest" ]; then
+  busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0 && (
+    sleep 0.1
+    hyprctl dispatch movetoworkspace +0, "class:^QQ$" | rg ok -q
+  )
+else
+  /bin/linuxqq
+fi
