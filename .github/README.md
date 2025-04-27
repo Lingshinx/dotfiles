@@ -10,6 +10,6 @@
 
 我乐意回答一切我能够回答的问题，更乐意接受你的提供的新奇点子，我始终保持好奇
 
-![desktop-dark-screenshot](.github/desktop-dark.png)
+![desktop-dark-screenshot](./desktop-dark.png)
 
-![desktop-light-screenshot](.github/desktop-light.png)
+![desktop-light-screenshot](./desktop-light.png)
