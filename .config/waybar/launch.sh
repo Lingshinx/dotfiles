@@ -13,4 +13,4 @@ ln -s $dir/theme/"$theme"/style.css $dir/base.css -f
 killall waybar
 pkill waybar
 
-waybar -c "$config"
+LANG=en_US.UTF-8 waybar -c "$config"
