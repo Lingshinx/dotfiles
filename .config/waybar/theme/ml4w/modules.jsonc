@@ -47,7 +47,8 @@
     "return-type": "json",
     "on-click": "kitty --class floating -e ~/.config/waybar/scripts/install-updates.sh",
     "exec": "~/.config/waybar/scripts/updates.sh",
-    "interval": 1800
+    "interval": 1800,
+    "exec-on-event": true
   },
   // ChatGPT Launcher
   "custom/fortune": {
