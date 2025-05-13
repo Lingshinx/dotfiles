@@ -8456,7 +8456,7 @@ leaflet.unfolded .contacts-contact-list>scrolledwindow,
 .sidebar-pane toolbarview>stack>box>widget>widget>scrolledwindow {
   background-color: #15161e;
   color: #e9e9ed;
-  border-radius: none;
+  border-radius: 0;
   margin: 0;
 }
 
@@ -8508,7 +8508,7 @@ row.expander leaflet.unfolded .contacts-contact-list>scrolledwindow image.expand
 .nautilus-window placessidebar>scrolledwindow {
   background-color: #1a1b26;
   color: #e9e9ed;
-  border-radius: none;
+  border-radius: 0;
   margin: 0;
 }
 
@@ -8609,7 +8609,7 @@ leaflet.unfolded .contacts-contact-list>scrolledwindow>viewport>.navigation-side
   color: rgba(26, 27, 38, 0.6);
   border-radius: 9px;
   color: #e9e9ed;
-  padding: 7px 0;
+  padding: 7px 5px;
 }
 
 placessidebar list.navigation-sidebar>row:hover,

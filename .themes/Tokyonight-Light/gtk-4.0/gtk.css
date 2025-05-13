@@ -8607,7 +8607,7 @@ leaflet.unfolded .contacts-contact-list>scrolledwindow>viewport>.navigation-side
   color: rgba(233, 233, 237, 0.7);
   border-radius: 9px;
   color: rgba(26, 27, 38, 0.87);
-  padding: 7px 0;
+  padding: 7px 5px;
 }
 
 placessidebar list.navigation-sidebar>row:hover,

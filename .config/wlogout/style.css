@@ -38,49 +38,49 @@ button:hover {
 }
 
 #back {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/back-light.svg"));
+  background-image: image(url("./assets/back-light.svg"));
 }
 
 #back:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/back-dark.svg"));
+  background-image: image(url("./assets/back-dark.svg"));
 }
 
 #windows {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/windows-light.svg"));
+  background-image: image(url("./assets/windows-light.svg"));
 }
 
 #windows:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/windows-dark.svg"));
+  background-image: image(url("./assets/windows-dark.svg"));
 }
 
 #exit {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/exit-light.svg"));
+  background-image: image(url("./assets/exit-light.svg"));
 }
 
 #exit:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/exit-dark.svg"));
+  background-image: image(url("./assets/exit-dark.svg"));
 }
 
 #lock {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/lock-light.svg"));
+  background-image: image(url("./assets/lock-light.svg"));
 }
 
 #lock:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/lock-dark.svg"));
+  background-image: image(url("./assets/lock-dark.svg"));
 }
 
 #shutdown {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/shutdown-light.svg"));
+  background-image: image(url("./assets/shutdown-light.svg"));
 }
 
 #shutdown:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/shutdown-dark.svg"));
+  background-image: image(url("./assets/shutdown-dark.svg"));
 }
 
 #reboot {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/reboot-light.svg"));
+  background-image: image(url("./assets/reboot-light.svg"));
 }
 
 #reboot:hover {
-  background-image: image(url("/home/lingshin/Pictures/icon/wlogout/reboot-dark.svg"));
+  background-image: image(url("./assets/reboot-dark.svg"));
 }
