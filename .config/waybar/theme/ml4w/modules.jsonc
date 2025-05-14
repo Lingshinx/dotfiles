@@ -63,7 +63,7 @@
   // Power Menu
   "custom/exit": {
     "format": "",
-    "on-click": "wlogout",
+    "on-click": "~/.config/lingshin/scripts/wlogout.sh",
     "tooltip-format": "Power Menu"
   },
   // Hyprshade
