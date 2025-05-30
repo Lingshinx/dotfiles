@@ -7,14 +7,14 @@
     "active-only": false,
     "all-outputs": true,
     // "format": "",
-    // "format-icons": {
-    //   "1": "",
-    //   "2": "",
-    //   "3": "",
-    //   "4": "",
-    //   "default": "",
-    //   "urgent": ""
-    // },
+    "format-icons": {
+      "1": "",
+      "2": "",
+      "3": "",
+      "4": "",
+      "default": "",
+      "urgent": ""
+    },
     "persistent-workspaces": {
       "1": [], // Always show a workspace with name '1', on all outputs if it does not exists
       "2": [],
@@ -27,6 +27,7 @@
     "default-submap": "Arch",
     "on-click": "~/.config/waybar/scripts/submap.sh Resize",
     "on-click-right": "~/.config/waybar/scripts/submap.sh Group",
+    "on-click-middle": "~/.config/waybar/scripts/submap.sh Ignore",
     "tooltip": false,
     "always-on": true
   },
@@ -50,7 +51,7 @@
     "interval": 1800,
     "exec-on-event": true
   },
-  // ChatGPT Launcher
+  // fortune
   "custom/fortune": {
     "format": " ",
     "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
@@ -65,13 +66,6 @@
     "format": "",
     "on-click": "~/.config/lingshin/scripts/wlogout.sh",
     "tooltip-format": "Power Menu"
-  },
-  // Hyprshade
-  "custom/hyprshade": {
-    "format": "",
-    "tooltip-format": "Toggle Screen Shader",
-    "on-click": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh",
-    "on-click-right": "sleep 0.5; ~/.config/hypr/scripts/hyprshade.sh rofi"
   },
   // System tray
   "tray": {
@@ -94,13 +88,11 @@
   },
   // CPU
   "cpu": {
-    // "format": "/ C {usage}% ",
     "format": " {usage}%",
     "interval": 3
   },
   // Memory
   "memory": {
-    // "format": "/ M {}% ",
     "format": "M {used:0.2f}G"
   },
   // Harddisc space used
@@ -136,14 +128,6 @@
       "temperature"
     ]
   },
-  // Group Links
-  "group/links": {
-    "orientation": "horizontal",
-    "modules": [
-      "custom/chatgpt",
-      "custom/empty"
-    ]
-  },
   // Network
   "network": {
     "format": "{ifname}",
@@ -177,10 +161,6 @@
       " ",
       " "
     ]
-  },
-  "cava": {
-    "hide_on_silence": true,
-    "method": "pipewire"
   },
   // Pulseaudio
   "pulseaudio": {
