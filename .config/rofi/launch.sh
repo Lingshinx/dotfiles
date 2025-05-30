@@ -8,5 +8,5 @@
 ## Run
 rofi \
   -show drun \
-  -theme $HOME/.config/rofi/drawer.rasi \
+  -theme $HOME/.config/rofi/"$1"/app.rasi \
   -icon-theme WhiteSur
