@@ -28,8 +28,9 @@ set games (
 
 set choosenGame (
   for game in $games
-      set appid (echo $game | cut -d '|' -f 2)
-      set name (echo $game | cut -d '|' -f 1)
+      set game (string split '|' $game)
+      set name $game[1]
+      set appid $game[2]
 
       set image (fd $libraryThumbName --type file $steamThumb/$appid | head -1)
       printf  "%s\x00icon\x1f$image\n" $name
@@ -37,11 +38,11 @@ set choosenGame (
       -config $launcherConfig
 )
 
-if test -n $choosenGame
+if test -n "$choosenGame"
     set launchId (printf %s\n $games | rg $choosenGame | cut -d '|' -f 2)
     echo $launchId
     set headerImage (fd ".*header.jpg" "$steamThumb/$launchId/" --type file)
 
     steam -applaunch "$launchId [gamemoderun %command%]" &
-    notify-send -a "HyDE Alert" -i "$headerImage" "Launching $choosenGame..."
+    notify-send -a Steam -i "$headerImage" "Launching $choosenGame..."
 end

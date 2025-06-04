@@ -1,0 +1,107 @@
+/*******************************************************************************
+ * MACOS SPOTLIGHT LIKE DARK THEME FOR ROFI 
+ * User                 : LR-Tech               
+ * Theme Repo           : https://github.com/lr-tech/rofi-themes-collection
+ *******************************************************************************/
+
+* {
+    font:   "Montserrat 12";
+
+    bg0:    #34374F00;
+    bg1:    #34374FE6;
+    bg2:    #878DB8E6;
+    bg3:    #8050d2E6;
+
+    fg0:    #B7BDF8;
+    fg1:    #FFFFFF;
+    fg2:    #cad3f5;
+
+    background-color:   transparent;
+    text-color:         @fg0;
+
+    margin:     0;
+    padding:    2 0;
+    spacing:    0;
+    height: 370;
+}
+
+window {
+    background-color:   @bg0;
+
+    location:       center;
+    width:          640;
+}
+
+inputbar {
+    background-color:   @bg1;
+    font:       "Montserrat 20";
+    padding:    12px;
+    spacing:    12px;
+    children:   [ icon-search, entry ];
+    border-radius:  12 12 0 0;
+}
+
+icon-search {
+    expand:     false;
+    filename:   "search";
+    size: 28px;
+}
+
+icon-search, entry, element-icon, element-text {
+    vertical-align: 0.5;
+}
+
+entry {
+    font:   inherit;
+
+    placeholder         : "Search";
+    placeholder-color   : @fg2;
+}
+
+message {
+    border:             2px 0 0;
+    border-color:       @bg1;
+    background-color:   @bg1;
+}
+
+textbox {
+    padding:    8px 24px;
+}
+
+listview {
+    top: 10px;
+    lines:      10;
+    columns:    1;
+    margin: -2.5px 0;
+
+    fixed-height:   false;
+    border:         0 0;
+    border-color:   @bg0;
+}
+
+element {
+    background-color:   @bg1;
+    padding:            8px 16px;
+    spacing:            16px;
+}
+
+element normal active {
+    text-color: @bg2;
+}
+
+element alternate active {
+    text-color: @bg2;
+}
+
+element selected normal, element selected active {
+    background-color:   @bg2;
+    text-color:         @fg1;
+}
+
+element-icon {
+    size:   1em;
+}
+
+element-text {
+    text-color: inherit;
+}
