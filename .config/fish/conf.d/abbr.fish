@@ -13,4 +13,4 @@ abbr -a la -- lsd -a
 abbr -a ll -- lsd -l
 abbr -a tree -- lsd --tree --depth=2
 
-abbr -a rm -- trash
+abbr -a rm -- gomi
