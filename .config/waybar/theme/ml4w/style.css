@@ -254,16 +254,23 @@ window#waybar.empty #window {
 }
 
 #submap.Resize {
+  color: white;
   background-color: #946EDE;
 }
 
 #submap.Ignore {
-  background-color: #DD88D7;
-
+  color: white;
+  background-color: #FF757F;
 }
 
 #submap.Group {
+  color: white;
   background-color: #DD88D7;
+}
+
+#submap.Mouse {
+  color: white;
+  background-color: #189F3C;
 }
 
 /* -----------------------------------------------------
