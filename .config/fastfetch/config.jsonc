@@ -2,7 +2,11 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "source": "\"$(~/.config/fastfetch/icon.fish)\"",
-    "height": 20
+    "height": 22,
+    "padding": {
+      "right": 1,
+      "top": 1
+    }
   },
   "display": {
     "separator": " "
@@ -10,15 +14,16 @@
   "modules": [
     {
       "type": "title",
-      "format": "{#cyan} {user-name-colored}@{host-name-colored}"
-    },
-    {
-      "type": "separator",
-      "string": "="
+      "format": "  {#1}Hello! {#cyan} {user-name-colored}@{host-name-colored}"
     },
     {
       "type": "custom",
-      "format": "󰌢  OS",
+      "format": "┌────────────────────────────",
+      "outputColor": "reset_"
+    },
+    {
+      "type": "custom",
+      "format": "󰌢 OS",
       "outputColor": "red"
     },
     {
@@ -53,7 +58,7 @@
     {
       "type": "command",
       "text": "gsettings get org.gnome.desktop.interface gtk-theme | tr -d \"'\"",
-      "key": "├─  theme",
+      "key": "├─  Theme",
       "keyColor": "green"
     },
     {
@@ -109,6 +114,12 @@
       "keyColor": "magenta"
     },
     {
+      "type": "datetime",
+      "key": "├─  Date",
+      "keyColor": "magenta",
+      "format": "{year-short}/{month-pretty}/{day-pretty} {hour-pretty}:{minute-pretty}"
+    },
+    {
       "type": "disk",
       "key": "├─ 󱦟 OS Age",
       "folders": "/",
@@ -117,7 +128,7 @@
     },
     {
       "type": "custom",
-      "format": "{#reset_} {#magenta} {#blue} {#yellow} {#green} {#red} {#cyan} "
+      "format": "└───{#magenta} {#blue} {#yellow} {#green} {#red} {#cyan} {#white} {#reset_}────"
     }
   ]
 }

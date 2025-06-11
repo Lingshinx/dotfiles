@@ -1,7 +1,7 @@
 #!/bin/fish
 
 if string match '*kitty' $TERM --quiet
-    fd . ~/.config/lingshin/fastfetch-icons | shuf -n 1
+    ~/.config/lingshin/scripts/tools/random.fish ~/.config/lingshin/fastfetch-icons
 else
     echo hello
 end
