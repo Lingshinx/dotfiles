@@ -2,18 +2,15 @@
 
 import { execSync } from 'child_process';
 
-const pos = execSync('hyprctl cursorpos').toString()
+const pos = execSync('hyprctl cursorpos').toString().split(',').map(x => parseInt(x))
 const monitor = JSON.parse(
   execSync('hyprctl monitors -j').toString()
 ).find(monitor => monitor.focused === true);
 
-const height = monitor.height;
-const monix = monitor.x;
-const moniy = monitor.y;
-const scale = monitor.scale;
+const { height, x, y, scale } = monitor
 
-const pos_x_raw = parseInt(pos.split(',')[0]) - monix;
-const pos_y_raw = parseInt(pos.split(',')[1]) - moniy;
+const pos_x_raw = pos[0] - x;
+const pos_y_raw = pos[1] - y;
 
 const pos_x = Math.round(pos_x_raw * scale)
 const pos_y = Math.round(height - pos_y_raw * scale)
