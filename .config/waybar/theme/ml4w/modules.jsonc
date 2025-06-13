@@ -54,17 +54,13 @@
   // fortune
   "custom/fortune": {
     "format": " ",
-    "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
-    "on-click-right": "~/.config/waybar/scripts/fortune/record.sh",
-    "exec": "sleep 0.1 && ~/.config/waybar/scripts/fortune/get.sh",
-    "return-type": "json",
-    "interval": "once",
-    "exec-on-event": true
+    "tooltip": false,
+    "on-click": "~/.config/lingshin/scripts/swww/random.sh"
   },
   // Power Menu
   "custom/exit": {
     "format": "",
-    "on-click": "~/.config/lingshin/scripts/wlogout.sh",
+    "on-click": "wlogout",
     "tooltip-format": "Power Menu"
   },
   // System tray
@@ -83,8 +79,12 @@
   // System
   "custom/system": {
     "format": "",
-    "tooltip": false,
-    "on-click": "~/.config/lingshin/scripts/swww/random.sh"
+    "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
+    "on-click-right": "~/.config/waybar/scripts/fortune/record.sh",
+    "exec": "sleep 0.1 && ~/.config/waybar/scripts/fortune/get.sh",
+    "return-type": "json",
+    "interval": "once",
+    "exec-on-event": true
   },
   // CPU
   "cpu": {
