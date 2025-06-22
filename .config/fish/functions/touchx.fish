@@ -1,2 +1,4 @@
-touch $argv
-chmod u+x $argv
+function touchx
+    touch $argv
+    chmod u+x $argv
+end
