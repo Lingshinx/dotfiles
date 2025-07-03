@@ -18,9 +18,11 @@ button {
   color: #CDD6F4;
   background-color: rgba(0, 0, 12, 0.1);
   background-repeat: no-repeat;
-  background-size: 15%;
+  background-position: 50% 40%;
+  background-size: 20%;
   font-weight: normal;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
+  padding-bottom: 40;
 }
 
 /* button:focus, */
