@@ -1,16 +1,25 @@
-theme=$(~/.config/lingshin/settings/waybar/theme.sh)
-monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .name')
 dir=~/.config/waybar
 
-echo "{ \"output\": \"$monitor\" }" >$dir/monitor.jsonc
+cur_monitor=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .name')
+way_monitor=$(cat $dir/monitor.jsonc | jq -r .output)
 
-config=$dir/theme/$theme/config.jsonc
+function startwaybar() {
+  theme=$(~/.config/lingshin/settings/waybar/theme.sh)
 
-ln -s $dir/theme/"$theme"/dark.css $dir/style-dark.css -f
-ln -s $dir/theme/"$theme"/light.css $dir/style-light.css -f
-ln -s $dir/theme/"$theme"/style.css $dir/base.css -f
+  echo "{ \"output\": \"$cur_monitor\" }" >$dir/monitor.jsonc
 
-killall waybar
-pkill waybar
+  config=$dir/theme/$theme/config.jsonc
 
-LANG=en_US.UTF-8 waybar -c "$config"
+  ln -s $dir/theme/"$theme"/dark.css $dir/style-dark.css -f
+  ln -s $dir/theme/"$theme"/light.css $dir/style-light.css -f
+  ln -s $dir/theme/"$theme"/style.css $dir/base.css -f
+
+  LANG=en_US.UTF-8 waybar -c "$config"
+}
+
+if test "$cur_monitor" = "$way_monitor"; then
+  pkill waybar || startwaybar
+else
+  pkill waybar
+  startwaybar
+fi
