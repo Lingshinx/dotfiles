@@ -89,7 +89,7 @@
     },
     {
       "type": "gpu",
-      "format": "{1} {3}",
+      "format": "{1} {2}",
       "key": "├─ 󰮂 GPU",
       "keyColor": "blue"
     },
@@ -98,7 +98,7 @@
       "key": "├─  Memory",
       "keyColor": "blue",
       "percent": {
-        "type": 7,
+        "type": 2,
         "green": 30,
         "yellow": 70
       }
