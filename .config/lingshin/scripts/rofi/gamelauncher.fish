@@ -43,6 +43,6 @@ if test -n "$choosenGame"
     echo $launchId
     set headerImage (fd ".*header.jpg" "$steamThumb/$launchId/" --type file)
 
-    steam -applaunch "$launchId [gamemoderun %command%]" &
+    steam -applaunch "$launchId [gamemoderun %command%]" -silent &
     notify-send -a Steam -i "$headerImage" "Launching $choosenGame..."
 end
