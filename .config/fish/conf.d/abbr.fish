@@ -14,3 +14,4 @@ abbr -a ll -- lsd -l
 abbr -a tree -- lsd --tree --depth=2
 
 abbr -a rm -- gomi
+abbr -a md -- mkdir -p
