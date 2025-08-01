@@ -15,5 +15,5 @@ if [ -n "$dest" ]; then
     hyprctl dispatch movetoworkspace +0, "class:^QQ$" | rg ok -q
   )
 else
-  /bin/linuxqq
+  hyprctl dispatch exec '[float; size 350 550;center]' /bin/linuxqq
 fi

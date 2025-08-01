@@ -6,4 +6,4 @@ dest=$(busctl --user list | rg 'org.kde.StatusNotifierItem-[0-9]+-1' | awk '{pri
     sleep 0.1
     hyprctl dispatch movetoworkspace +0, 'class:^(wechat)$' | rg ok -q
   )
-) || /bin/wechat
+) || hyprctl dispatch exec '[float; center]' /bin/wechat
