@@ -1,5 +1,5 @@
 * {
-  font-family: "Fira Sans Semibold", "Font Awesome 6 Free", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+  font-family: "Fira Sans Semibold", "FiraCode Nerd Font Propo", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
   border: none;
   border-radius: 0px;
 }
@@ -139,34 +139,7 @@ window#waybar.empty #window {
  * Custom Quicklinks
  * ----------------------------------------------------- */
 
-#custom-brave,
-#custom-browser,
-#custom-keybindings,
-#custom-outlook,
-#custom-filemanager,
-#custom-teams,
-#custom-fortune,
-#custom-calculator,
-#custom-windowsvm,
-#custom-cliphist,
-#custom-settings,
-#custom-wallpaper,
-#custom-system,
-#custom-hyprshade,
-#custom-hypridle,
-#custom-tools,
-#custom-quicklink1,
-#custom-quicklink2,
-#custom-quicklink3,
-#custom-quicklink4,
-#custom-quicklink5,
-#custom-quicklink6,
-#custom-quicklink7,
-#custom-quicklink8,
-#custom-quicklink9,
-#custom-quicklink10,
-#custom-waybarthemes {
-  margin-right: 16px;
+#custom-system {
   font-size: 20px;
   font-weight: bold;
   opacity: 0.8;
@@ -278,7 +251,7 @@ window#waybar.empty #window {
  * ----------------------------------------------------- */
 
 #custom-exit {
-  margin: 0px 13px 0px 0px;
+  margin: 0px 22px 0px 0px;
   padding: 0px;
   font-size: 20px;
   color: @exit;
