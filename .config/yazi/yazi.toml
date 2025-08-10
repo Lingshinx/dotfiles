@@ -1,0 +1,7 @@
+[mgr]
+sort_by = "natural"
+ratio = [3, 5, 6]
+
+
+[opener]
+edit = [{ run = "nvim $@", desc = "用nvim打开", block = true }]

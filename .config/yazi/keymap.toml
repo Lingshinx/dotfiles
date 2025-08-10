@@ -1,0 +1,8 @@
+[mgr]
+prepend_keymap = [
+  { on = [
+    "g",
+    "w",
+  ], run = "cd ~/Desktop/Workspace", desc = "Go to Workspace" },
+  { on = "d", run = "remove --force", desc = "Trash selected files" },
+]
