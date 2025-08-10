@@ -61,6 +61,7 @@
   "custom/exit": {
     "format": "",
     "on-click": "wlogout",
+    "on-click-right": "XDG_CURRENT_DESKTOP=gnome gnome-control-center",
     "tooltip-format": "Power Menu"
   },
   // System tray
@@ -78,7 +79,7 @@
   },
   // System
   "custom/system": {
-    "format": "",
+    "format": " ",
     "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
     "on-click-right": "~/.config/waybar/scripts/fortune/record.sh",
     "exec": "sleep 0.1 && ~/.config/waybar/scripts/fortune/get.sh",
@@ -108,7 +109,7 @@
     "format-critical": "{temperatureC}°C!!",
     "format-icons": [
       "",
-      "",
+      "",
       "",
       ""
     ]
