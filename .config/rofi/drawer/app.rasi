@@ -11,7 +11,7 @@
 configuration {
 	modi:                       "drun";
     show-icons:                 true;
-    display-drun:               "";
+    display-drun:               " ";
 	drun-display-format:        "{name}";
 }
 
@@ -19,7 +19,7 @@ configuration {
 @import                          "onedark.rasi"
 
 * {
-    font: "Iosevka Nerd Font 12";
+    font: "FiraCode Nerd Font 12";
 }
 
 /*****----- Main Window -----*****/
