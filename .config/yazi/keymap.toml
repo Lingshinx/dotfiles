@@ -4,5 +4,9 @@ prepend_keymap = [
     "g",
     "w",
   ], run = "cd ~/Desktop/Workspace", desc = "Go to Workspace" },
+  { on = [
+    "g",
+    "l",
+  ], run = "cd ~/.local/share", desc = "Go to Data" },
   { on = "d", run = "remove --force", desc = "Trash selected files" },
 ]
