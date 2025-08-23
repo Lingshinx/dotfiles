@@ -4,16 +4,12 @@ threshhold_green=0
 threshhold_yellow=25
 threshhold_red=100
 
-check_lock_files() {
-  local pacman_lock="/var/lib/pacman/db.lck"
-  local checkup_lock="${TMPDIR:-/tmp}/checkup-db-${UID}/db.lck"
+local pacman_lock="/var/lib/pacman/db.lck"
+local checkup_lock="${TMPDIR:-/tmp}/checkup-db-${UID}/db.lck"
 
-  while [ -f "$pacman_lock" ] || [ -f "$checkup_lock" ]; do
-    sleep 1
-  done
-}
-
-check_lock_files
+while [ -f "$pacman_lock" ] || [ -f "$checkup_lock" ]; do
+  sleep 1
+done
 
 updates=$(checkupdates-with-aur | wc -l)
 
