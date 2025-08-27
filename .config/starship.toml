@@ -1,7 +1,7 @@
 format = "$all$username$character"
 
 right_format = """
-$time\
+$time
 """
 
 [hostname]
@@ -12,19 +12,14 @@ style = "bold green"
 [username]
 format = "[$user](bold underline red) "
 
-[character]
-success_symbol = '[❯](bold green)'
-vimcmd_symbol = '[❮](bold blue)'
-
 [directory]
-format = '[ ](#7adfff) [$path]($style)[$read_only]($read_only_style) '
-style = "bold #8acfff"
+format = '[  $path]($style)[$read_only]($read_only_style) '
 read_only = "󰌾 "
 
 
 [time]
 disabled = false
-format = "[ $time]($style)"
+format = "[$time]($style)"
 time_format = "%R"
 utc_time_offset = "local"
 style = "dimmed white"
