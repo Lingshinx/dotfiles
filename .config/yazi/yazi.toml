@@ -7,4 +7,4 @@ max_width = 10000
 max_height = 10000
 
 [opener]
-edit = [{ run = 'nvim "$@"', desc = "open with nvim", block = true }]
+edit = [{ run = 'nvim $@', desc = "open with nvim", block = true }]
