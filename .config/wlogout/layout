@@ -12,7 +12,7 @@
 }
 {
     "label" : "windows",
-    "action" : "~/.config/lingshin/scripts/chwin",
+    "action" : "systemctl reboot --boot-loader-entry=windows.conf",
     "text" : "[W]indows",
     "keybind" : "w"
 }
