@@ -1,0 +1,10 @@
+[options]
+overlay_position_bottom = true
+overlay_font = Noto Sans CJK SC Light:14
+overlay_text = ' ' $imv_current_index/$imv_file_count [$imv_height"x"$imv_width] $(realpath --relative-to=$(pwd) $imv_current_file) [$imv_scaling_mode]
+title_text = $(realpath --relative-to=$(pwd) $imv_current_file)
+
+[binds]
+<Shift+K> = overlay
+<Shift+H> = prev
+<Shift+L> = next
