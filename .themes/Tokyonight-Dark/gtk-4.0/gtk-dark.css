@@ -8616,7 +8616,7 @@ placessidebar list.navigation-sidebar>row>revealer,
 .nautilus-window placessidebar>scrolledwindow>viewport>.navigation-sidebar>row>revealer,
 leaflet.unfolded .contacts-contact-list>scrolledwindow>viewport>.navigation-sidebar>row>revealer,
 .sidebar-pane toolbarview>stack>box>widget>widget>scrolledwindow>.navigation-sidebar>row>revealer {
-  margin: auto;
+  /* margin: auto; */
 }
 
 placessidebar list.navigation-sidebar>row:hover,
