@@ -8,3 +8,5 @@ title_text = $(realpath --relative-to=$(pwd) $imv_current_file)
 <Shift+K> = overlay
 <Shift+H> = prev
 <Shift+L> = next
+<space> = next
+<Shift+space> = prev
