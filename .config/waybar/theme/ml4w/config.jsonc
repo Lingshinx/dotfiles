@@ -12,8 +12,7 @@
   "modules-left": [
     "hyprland/submap",
     "custom/fortune",
-    "hyprland/window",
-    "custom/empty"
+    "hyprland/window"
   ],
   "modules-center": [
     "hyprland/workspaces"
