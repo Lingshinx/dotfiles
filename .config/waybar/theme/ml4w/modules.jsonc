@@ -25,9 +25,9 @@
   // SubMap
   "hyprland/submap": {
     "default-submap": "Arch",
-    "on-click": "~/.config/waybar/scripts/submap.sh Resize",
-    "on-click-right": "~/.config/waybar/scripts/submap.sh Group",
-    "on-click-middle": "~/.config/waybar/scripts/submap.sh Ignore",
+    "on-click": "~/.config/lingshin/scripts/waybar/submap.sh Resize",
+    "on-click-right": "~/.config/lingshin/scripts/waybar/submap.sh Group",
+    "on-click-middle": "~/.config/lingshin/scripts/waybar/submap.sh Ignore",
     "tooltip": false,
     "always-on": true
   },
@@ -46,8 +46,8 @@
     "format": "{}",
     "escape": true,
     "return-type": "json",
-    "on-click": "kitty --class floating -e ~/.config/waybar/scripts/install-updates.sh",
-    "exec": "~/.config/waybar/scripts/updates.sh",
+    "on-click": "kitty --class floating -e ~/.config/lingshin/scripts/waybar/install-updates.sh",
+    "exec": "~/.config/lingshin/scripts/waybar/check-updates.sh",
     "interval": 1800,
     "exec-on-event": true
   },
@@ -80,9 +80,9 @@
   // System
   "custom/system": {
     "format": " ",
-    "on-click": "~/.config/waybar/scripts/fortune/generate.sh",
-    "on-click-right": "~/.config/waybar/scripts/fortune/record.sh",
-    "exec": "sleep 0.1 && ~/.config/waybar/scripts/fortune/get.sh",
+    "on-click": "~/.config/lingshin/scripts/waybar/fortune/generate.sh",
+    "on-click-right": "~/.config/lingshin/scripts/waybar/fortune/record.sh",
+    "exec": "sleep 0.1 && ~/.config/lingshin/scripts/waybar/fortune/get.sh",
     "return-type": "json",
     "interval": "once",
     "exec-on-event": true
@@ -141,7 +141,7 @@
     "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
     "tooltip-format-disconnected": "󰪎 ",
     "max-length": 50,
-    "on-click": "~/.config/waybar/scripts/nm-applet.sh"
+    "on-click": "~/.config/lingshin/scripts/waybar/nm-applet.sh"
   },
   // Battery
   "battery": {

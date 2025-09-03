@@ -1,3 +1,5 @@
+#!/bin/bash
+
 echo
 kitten icat ~/.config/waybar/assets/load-arrow.png
 

@@ -10,8 +10,8 @@ set Resize    '0xeeaa88ff 0xee7799bb 45deg'
 set reset     '0xee33ccff 0xee00ff99 45deg'
 
 set mode $argv[1]
-if test "$(hyprctl submap)" = $mode 
-  hyprctl dispatch submap reset -q 
+if test "$(hyprctl submap)" = $mode
+  hyprctl dispatch submap reset -q
   setBorder $reset
   exit
 end
