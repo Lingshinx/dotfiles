@@ -1,20 +1,20 @@
-submap=$(hyprctl submap)
-alias setBorder='hyprctl keyword general:col.active_border'
-passthruColor="0xeefca7ea 0xee33ccff 45deg"
-groupColor="0xeefca7ea 0xee33ccff 45deg"
-resizeColor="0xeeaa88ff 0xee7799bb 45deg"
-resetColor="0xee33ccff 0xee00ff99 45deg"
+#!/bin/fish
 
-if test "$submap" = "default"; then
-  hyprctl dispatch submap "$1" -q
-  if test "$1" = "Resize"; then
-    setBorder "$resizeColor"
-  elif test "$1" = "Group"; then
-    setBorder "$groupColor"
-  elif test "$1" = "Ignore"; then
-    setBorder "$passthruColor"
-  fi
-else
-  hyprctl dispatch submap reset -q
-  setBorder "$resetColor"
-fi
+function setBorder
+  hyprctl keyword general:col.active_border $argv
+end
+
+set Ignore    '0xeefca7ea 0xee33ccff 45deg'
+set Group     '0xeefca7ea 0xee33ccff 45deg'
+set Resize    '0xeeaa88ff 0xee7799bb 45deg'
+set reset     '0xee33ccff 0xee00ff99 45deg'
+
+set mode $argv[1]
+if test "$(hyprctl submap)" = $mode 
+  hyprctl dispatch submap reset -q 
+  setBorder $reset
+  exit
+end
+
+setBorder $$mode
+hyprctl dispatch submap $mode -q
