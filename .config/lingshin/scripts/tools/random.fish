@@ -1,13 +1,13 @@
 #!/bin/fish
 
 set source_dir $argv[1]
-set cache_dir ~/.cache/lingshin/randoms/(realpath $source_dir --relative-base=$HOME | tr / -)
+set cache_dir ~/.cache/lingshin/randoms/(realpath --relative-base=$HOME $source_dir | tr / -)
 set list_file $cache_dir/list
 set index_file $cache_dir/index
 
 mkdir -p $cache_dir
 
-if ! test -d $source_dir
+if not test -d $source_dir
     echo "No such file or directory"
     exit 1
 end
@@ -28,4 +28,4 @@ end
 set index (cat $index_file)
 
 sed -n "$index"p $list_file
-echo (math $index - 1) >"$index_file"
+math $index - 1 >"$index_file"
