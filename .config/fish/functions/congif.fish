@@ -1,3 +1,3 @@
-function congif --wraps='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME' --description 'alias congif=/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+function congif
     /usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME $argv
 end
