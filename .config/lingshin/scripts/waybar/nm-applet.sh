@@ -1,3 +1,3 @@
 #!/bin/fish
 
-pkill nm-applet || nm-applet --indicator
+pkill -x nm-applet || nm-applet --indicator
