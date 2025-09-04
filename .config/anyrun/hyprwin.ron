@@ -1,6 +1,3 @@
 Config(
     prefix: " ",
-    icons: {
-        "org.wezfurlong.wezterm": "wezterm",
-    }
 )
