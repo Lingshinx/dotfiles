@@ -1,7 +1,0 @@
-Config (
-    prefix: ":"
-    shell: zsh, //bash, zsh, etc.
-    stdout: "",
-    max_line: 65535, //max lenght of the command result ( 65535 = 2 ^ 16)
-    }
-)
