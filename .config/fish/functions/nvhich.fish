@@ -1,3 +1,3 @@
 function nvhich
-    nvim (which $argv[1])
+    nvim (which $argv)
 end

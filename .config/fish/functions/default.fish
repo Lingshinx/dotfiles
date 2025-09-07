@@ -1,0 +1,15 @@
+function default
+  if not isatty stdin
+    read stdin
+    echo $stdin | wc -w | read is_empty
+    test $is_empty -gt 0
+    and echo $stdin
+    or echo $argv
+    return 0
+  end
+
+  set rest $argv[2..]
+  test -n "$rest"
+  and echo $rest
+  or echo $argv[1]
+end
