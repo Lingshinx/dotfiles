@@ -1,4 +1,3 @@
 #!/bin/bash
 
-anyrun_dir=~/.config/anyrun
-ln -s $anyrun_dir/style-dark.css $anyrun_dir/style.css -f
+ln -sf ~/.config/anyrun/{style-dark.css,style.css}
