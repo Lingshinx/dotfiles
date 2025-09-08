@@ -4,14 +4,6 @@
   color: #E0F3FF;
 }
 
-#window,
-#match,
-#entry,
-#plugin,
-#main {
-  background: transparent;
-}
-
 #match.activatable {
   border-radius: 5px;
   padding: 0.3rem 0.9rem;
