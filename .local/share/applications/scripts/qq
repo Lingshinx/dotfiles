@@ -1,19 +1,18 @@
-#!/bin/bash
+#!/bin/fish
 
-items=$(busctl --user \
-  get-property org.kde.StatusNotifierWatcher /StatusNotifierWatcher \
+set items (busctl --user \
+  get-property org.kde.StatusNotifierWatcher \
+  /StatusNotifierWatcher \
   org.kde.StatusNotifierWatcher \
-  RegisteredStatusNotifierItems | sed 's/as [0-9]\+ //g' | tr -d '"' | tr ' ' '\n' | cut -d'/' -f1)
+  RegisteredStatusNotifierItems | sed 's/as [0-9]\+ //g' | tr -d '"' | tr ' ' '\n' | choose -f / 0)
 
-qqs=$(busctl --user list | rg qq | awk '{print $1}')
+set qqs (busctl --user list | rg qq | choose 0)
 
-dest=$(comm -12 <(echo "$qqs" | sort) <(echo "$items" | sort))
+set dest (comm -12 (echo "$qqs" | sort | push) (echo "$items" | sort | push))
 
-if [ -n "$dest" ]; then
-  busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0 && (
-    sleep 0.1
-    hyprctl dispatch movetoworkspace +0, "class:^QQ$" | rg ok -q
-  )
-else
-  hyprctl dispatch exec '[float; size 350 550;center]' /bin/linuxqq
-fi
+if test -z "$dest"
+  /bin/linuxqq
+  return
+end
+
+busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0

@@ -1,9 +1,6 @@
-#!/bin/bash
+#!/bin/fish
 
-dest=$(busctl --user list | rg 'org.kde.StatusNotifierItem-[0-9]+-1' | awk '{print $1}')
-(
-  busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0 && (
-    sleep 0.1
-    hyprctl dispatch movetoworkspace +0, 'class:^(wechat)$' | rg ok -q
-  )
-) || hyprctl dispatch exec '[float; center]' /bin/wechat
+set dest (busctl --user list | rg 'org.kde.StatusNotifierItem-[0-9]+-1' | choose 0)
+test -n "$dest"
+and busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0
+or /bin/wechat

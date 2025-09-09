@@ -12,10 +12,10 @@
   "modules-left": [
     "hyprland/submap",
     "custom/fortune",
-    "hyprland/window"
+    "niri/window"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "niri/workspaces"
   ],
   "modules-right": [
     "custom/updates",

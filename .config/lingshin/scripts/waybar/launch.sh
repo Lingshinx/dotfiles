@@ -2,7 +2,7 @@
 
 set dir ~/.config/waybar
 
-set cur_monitor (hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .name')
+set cur_monitor (niri msg --json focused-output | jq -r .name)
 set way_monitor (jq -r .output < $dir/monitor.jsonc)
 
 not pkill waybar || not test $cur_monitor = $way_monitor && begin
