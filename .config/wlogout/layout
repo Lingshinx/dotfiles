@@ -24,7 +24,7 @@
 }
 {
     "label" : "exit",
-    "action" : "hyprctl dispatch exit",
+    "action" : "niri msg action quit --skip-confirmation",
     "text" : "[E]xit",
     "keybind" : "e"
 }
