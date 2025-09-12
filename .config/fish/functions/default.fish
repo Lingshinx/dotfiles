@@ -1,7 +1,7 @@
 function default
   if not isatty stdin
-    read stdin
-    echo $stdin | wc -w | read is_empty
+    read -f stdin
+    echo $stdin | wc -w | read -f is_empty
     test $is_empty -gt 0
     and echo $stdin
     or echo $argv
