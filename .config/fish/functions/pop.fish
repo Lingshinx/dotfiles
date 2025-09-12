@@ -1,6 +1,6 @@
 function pop
-  set stack /tmp/lingshin/$fish_pid
-  set stackfile $stack/.stack
+  set -f stack /tmp/lingshin/$fish_pid
+  set -f stackfile $stack/.stack
 
   if not test -f $stackfile
     error -e no stack now, use {push} first
@@ -24,7 +24,7 @@ function pop
     return 1
   end
 
-  set line (math (wc -l $stackfile | choose 0) - $argv +1)
+  set -f line (math (wc -l $stackfile | choose 0) - $argv +1)
   isatty stdout
     or tail -n $argv $stackfile | tac
   sed -i $line,'$d' $stackfile

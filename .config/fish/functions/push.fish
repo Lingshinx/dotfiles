@@ -1,6 +1,6 @@
 function push
-  set stack (md /tmp/lingshin/$fish_pid)
-  set stackfile $stack/.stack
+  set -f stack (md /tmp/lingshin/$fish_pid)
+  set -f stackfile $stack/.stack
 
   if not isatty stdin
     if test (count $argv) -gt 1 || string match -rq -- '-\d+' $argv[1]
@@ -8,7 +8,7 @@ function push
       return 1
     end
 
-    set target (test -z "$argv" && mktemp --tmpdir=$stack || echo $stack/(basename -- $argv))
+    set -f target (test -z "$argv" && mktemp --tmpdir=$stack || echo $stack/(basename -- $argv))
     cat > $target
     echo $target | tee --append $stackfile
     return
@@ -19,7 +19,7 @@ function push
     return
   end
 
-  set double_dash 0
+  set -f double_dash 0
   for file in $argv
     if test $double_dash = 0
       if test $file = --
@@ -31,7 +31,7 @@ function push
       end
     end
     set double_dash 0
-    set target $stack/(basename -- $file)
+    set -f target $stack/(basename -- $file)
     test -f $file && cp $file $target || echo > $target
     echo $target
   end | tee --append $stackfile

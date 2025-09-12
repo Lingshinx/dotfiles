@@ -33,7 +33,7 @@ function trans
     end
   end
 
-  set prompt 'echo -n \n(set_color bryellow)"  trans"\n(set_color green)"❯ "(set_color normal)'
+  set -f prompt 'echo -n \n(set_color bryellow)"  trans"\n(set_color green)"❯ "(set_color normal)'
   if test -n "$argv"
     translate "$argv"
   else
