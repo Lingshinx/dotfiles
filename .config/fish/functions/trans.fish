@@ -1,10 +1,10 @@
 function trans
-  set -x trans_argu -brief -e (
+  set -fx trans_argu -brief -e (
     set -q https_proxy || set -q http_proxy && echo google || echo bing
   )
 
   if not isatty stdin
-    while read line
+    while read -f line
       test -n "$line"
       and command trans $trans_argu "$line"
       or echo
@@ -37,7 +37,7 @@ function trans
   if test -n "$argv"
     translate "$argv"
   else
-    while read -p $prompt line
+    while read -fp $prompt line
       translate $line
     end
   end
