@@ -8,7 +8,7 @@ function default
     return 0
   end
 
-  set rest $argv[2..]
+  set -f rest $argv[2..]
   test -n "$rest"
   and echo $rest
   or echo $argv[1]

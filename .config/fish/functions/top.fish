@@ -1,6 +1,6 @@
 function top
-  set stack /tmp/lingshin/$fish_pid
-  set stackfile $stack/.stack
+  set -f stack /tmp/lingshin/$fish_pid
+  set -f stackfile $stack/.stack
   if not test -f $stackfile
     error -e no stack now, use {push} first
     return 1
@@ -11,14 +11,14 @@ function top
     return
   end
 
-  set double_dash 0
+  set -f double_dash 0
   for file in $argv
     if test $double_dash = 0
       test $file = --
       and  set double_dash 1
       and continue
 
-      string match -r -- '-(\d*)(,?)(\d*)' $file | read all start comma end
+      string match -r -- '-(\d*)(,?)(\d*)' $file | read -f all start comma end
       if test -n "$all"
         if test -z "$start"
           set start 1
