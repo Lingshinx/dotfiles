@@ -11,7 +11,10 @@ set qqs "$(busctl --user list | rg qq | choose 0)"
 set dest (comm -12 (echo "$qqs" | sort | push) (echo "$items" | sort | push))
 
 if test -z "$dest"
-  /bin/linuxqq --ozone-platform-hint=auto --enable-wayland-ime %U
+  /bin/linuxqq --ozone-platform-hint=auto \
+               --enable-wayland-ime \
+               --enable-features=UseOzonePlatform \
+               --wayland-text-input-version=3 %U
   return
 end
 
