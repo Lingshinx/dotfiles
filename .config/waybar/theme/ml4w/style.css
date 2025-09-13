@@ -1,13 +1,10 @@
 * {
   font-family: "Fira Sans Semibold", "FiraCode Nerd Font Propo", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
-  border: none;
-  border-radius: 0px;
 }
 
 window#waybar {
   background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 0px solid #ffffff;
-  /* color: #FFFFFF; */
   background: transparent;
   transition-property: background-color;
   transition-duration: .5s;
@@ -32,8 +29,8 @@ window#waybar {
 
 #workspaces button {
   padding: 0px 5px;
+  min-width: 18px;
   margin: 4px 3px;
-  border-radius: 15px;
   border: 0px;
   color: @workspaces;
   background-color: @workspacesbackground2;
@@ -44,7 +41,6 @@ window#waybar {
 #workspaces button.active {
   color: @active;
   background: @workspacesbackground2;
-  border-radius: 15px;
   min-width: 40px;
   transition: all 0.3s ease-in-out;
   opacity: 1.0;
