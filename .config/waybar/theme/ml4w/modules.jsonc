@@ -1,8 +1,8 @@
 {
   // Workspaces
   "niri/workspaces": {
-    "on-scroll-up": "niri msg action focus-workspace-up",
-    "on-scroll-down": "niri msg action focus-workspace-down",
+    "on-scroll-up": "niri msg action focus-column-left",
+    "on-scroll-down": "niri msg action focus-column-right",
     "all-outputs": true,
     // "format": "",
     "format-icons": {
@@ -17,15 +17,15 @@
   // SubMap
   "hyprland/submap": {
     "default-submap": "Arch",
-    "on-click": "~/.config/lingshin/scripts/hypr/submap.sh Resize",
-    "on-click-right": "~/.config/lingshin/scripts/hypr/submap.sh Group",
-    "on-click-middle": "~/.config/lingshin/scripts/hypr/submap.sh Ignore",
+    "on-click": "niri msg action toggle-overview",
+    "on-click-right": "",
+    "on-click-middle": "niri msg pick-window | wl-copy",
     "tooltip": false,
     "always-on": true
   },
   // Hyprland Window
   "niri/window": {
-    "on-click": "anyrun",
+    "on-click": "~/.config/lingshin/scripts/rofi/launch.sh drawer",
     "on-click-right": "kitty",
     "rewrite": {
       "(.*) — Mozilla FireFox": "$1"
