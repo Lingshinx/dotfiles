@@ -1,5 +1,3 @@
-#!/bin/bash
+#!/bin/fish
 
-wallpapers=$1
-
-swww img --transition-fps 60 -t grow "$wallpapers" $(~/.config/lingshin/scripts/swww/cursor.js)
+swww img --transition-fps 60 -t grow $argv[1] -o (niri msg --json focused-output | jq -r .name)

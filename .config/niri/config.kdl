@@ -1,5 +1,5 @@
 spawn-at-startup "~/.config/lingshin/scripts/waybar/launch.sh";
-spawn-sh-at-startup "~/.config/lingshin/scripts/swww/init.sh";
+spawn-at-startup "~/.config/lingshin/scripts/niri/init-swww.sh";
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store";
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store";
 spawn-sh-at-startup "pkill darkman; darkman run"
@@ -194,10 +194,12 @@ binds {
   Mod+Alt+F repeat=false {   toggle-windowed-fullscreen; }
 
   Mod+Tab repeat=false { switch-focus-between-floating-and-tiling; }
-  Mod+Shift+Tab repeat=false { toggle-overview; }
+  Mod+Shift+Tab repeat=false { 
+    spawn "~/.config/lingshin/scripts/niri/toggle-overview.sh"
+  }
 
   Mod+T repeat=false       { spawn "kitty"; }
-  Mod+Shift+T repeat=false { spawn "neovide"; }
+  Mod+Shift+T repeat=false { spawn "neovide" "--grid" "100x100"; }
   Mod+Return repeat=false   { spawn "kitty" "--class" "floating"; }
 
   Mod+Space repeat=false   { spawn-sh "pkill anyrun || anyrun"; }
