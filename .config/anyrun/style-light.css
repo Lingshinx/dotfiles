@@ -4,35 +4,35 @@
   color: #444;
 }
 
-#match.activatable:last-child {
+.match:last-child {
   margin-bottom: 0;
 }
 
-#match.activatable:first-child {
+.match:first-child {
   margin-top: 0;
 }
 
-#match.activatable {
+.match {
   border-radius: 5px;
   padding: 1rem;
 }
 
-#match:selected {
+.match:selected {
   background: #80B6CA;
 }
 
-#match:hover {
+.match:hover {
   background: #D2D2D2;
 }
 
-#entry {
+.entry {
   background: #EBF0F9;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   padding: 1rem;
 }
 
-list>#plugin {
+list>.plugin {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   margin-top: 1rem;
   background: #EBF0F9;
@@ -40,7 +40,7 @@ list>#plugin {
   border-radius: 5px;
 }
 
-box#main {
+box.main {
   background: transparent;
   border-radius: 5px;
   padding: 3px;
