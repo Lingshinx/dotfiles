@@ -41,7 +41,7 @@ list.plugin {
 }
 
 box.main {
+  padding: 50px 200px;
   background: transparent;
   border-radius: 5px;
-  padding: 3px;
 }
