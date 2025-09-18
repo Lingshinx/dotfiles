@@ -12,6 +12,12 @@ input {
 output "HDMI-A-1" {
   mode "2560x1600@130"
   scale 1.33
+  transform "270"
+}
+
+output "DP-2" {
+  mode "2560x1440@165"
+  scale 1.25
 }
 
 environment {
@@ -121,6 +127,18 @@ window-rule {
   open-floating true
   default-column-width { fixed 900; }
   default-window-height { fixed 600; }
+}
+
+// steam 
+window-rule {
+  match app-id="^steam$" title="^好友列表$"
+  default-column-width { fixed 400; }
+}
+
+window-rule {
+  match app-id="^steam$" title=r#"^notificationtoast"#
+  default-floating-position x=0 y=0  relative-to="bottom-right"
+  open-focused false;
 }
 
 layer-rule {
@@ -234,7 +252,7 @@ binds {
 
   Mod+Alt+Ctrl+S   { spawn "~/.config/lingshin/scripts/screenshot/qrcode.sh"; }
 
-  Mod+Shift+C   { spawn "hyprpicker"; }
+  Mod+Shift+C   { spawn "hyprpicker" "-a"; }
 
   Mod+D { spawn "darkman" "toggle"; }
 
