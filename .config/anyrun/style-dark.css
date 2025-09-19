@@ -4,6 +4,10 @@
   color: #E0F3FF;
 }
 
+window {
+  background: transparent
+}
+
 .match:last-child {
   margin-bottom: 0;
 }
@@ -21,6 +25,11 @@ row.match:hover, row.match:selected  {
   background: #2C3C6F;
 }
 
+row.match .description {
+  font-size: 0.8rem;
+  color: #88A
+}
+
 text {
   background: #24283B;
   border-radius: 10px;
@@ -31,7 +40,7 @@ text {
 list.plugin {
   margin-top: 1rem;
   background: #24283B;
-  padding: 3px;
+  padding: 4px;
   border-radius: 10px;
   border: 1px solid #9CA5CB;
 }
