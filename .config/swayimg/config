@@ -1,0 +1,62 @@
+[viewer]
+transparency = #00000000
+scale = fit
+preload = 10
+
+[slideshow]
+time = 1
+transparency = #00000000
+position=free
+
+[gallery]
+preload = yes
+background = #09101f
+select = #111034
+border = #111034
+shadow = #131335
+
+[font]
+name = Noto Sans CJK SC
+size = 16
+color = #c8d3f5
+shadow = #222436
+
+[info]
+show = no
+
+[keys.viewer]
+Shift+asciicircum = first_file
+Shift+dollar = last_file
+Space = prev_file
+Shift+Space = next_file
+Left = prev_file
+Right = next_file
+Shift+h = prev_file
+Shift+l = next_file
+g = first_file
+Shift+g = last_file
+d = skip_file
+p = animation
+Escape = mode gallery
+h = step_left
+l = step_right 
+k = step_up
+j = step_down 
+r = rotate_right
+Shift+r = rotate_left
+v = flip_horizontal
+Shift+v = flip_vertical
+p = exec realpath --relative-base $(pwd) %
+w = exec ~/.config/lingshin/scripts/swww/switch.sh %
+Shift+plus = zoom +10
+Equal = zoom
+
+[keys.gallery]
+h = step_left
+l = step_right
+k = step_up
+j = step_down
+
+Ctrl+f = page_down
+Ctrl+b = page_up
+d = skip_file
