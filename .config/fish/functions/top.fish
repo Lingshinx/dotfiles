@@ -15,10 +15,10 @@ function top
   for file in $argv
     if test $double_dash = 0
       test $file = --
-      and  set double_dash 1
+      and set double_dash 1
       and continue
 
-      string match -r -- '-(\d*)(,?)(\d*)' $file | read -f all start comma end
+      string match -r -- '-(\d*)(,?)(\d*)' $file | read --line -f all start comma end
       if test -n "$all"
         if test -z "$start"
           set start 1
@@ -26,7 +26,7 @@ function top
           sed -n (math (wc -l $stackfile | choose 0) +1 -$start)p $stackfile
           return
         end
-        set end (default '$' $range[4])
+        set end (default '$' $end)
         tac $stackfile | sed -n "$start,$end"p
         continue
       end
