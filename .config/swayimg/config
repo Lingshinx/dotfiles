@@ -1,3 +1,6 @@
+[general]
+overlay = no
+
 [viewer]
 transparency = #00000000
 scale = fit
