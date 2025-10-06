@@ -155,15 +155,15 @@ overview {
 }
 
 binds {
-  Mod+H { focus-column-or-monitor-left; }
+  Mod+H { focus-column-left; }
   Mod+J { focus-window-or-workspace-down; }
   Mod+K { focus-window-or-workspace-up; }
-  Mod+L { focus-column-or-monitor-right; }
+  Mod+L { focus-column-right; }
 
-  Mod+Shift+H     { move-column-left-or-to-monitor-left; }
+  Mod+Shift+H     { move-column-left; }
   Mod+Shift+J     { move-column-to-workspace-down; }
   Mod+Shift+K     { move-column-to-workspace-up; }
-  Mod+Shift+L     { move-column-right-or-to-monitor-right; }
+  Mod+Shift+L     { move-column-right; }
 
   Mod+Ctrl+K    { move-window-up; }
   Mod+Ctrl+J  { move-window-down; }
