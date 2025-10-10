@@ -1,0 +1,3 @@
+[submodule "/home/lingshin/.config/nvim"]
+	path = /home/lingshin/.config/nvim
+	url = git@github.com:Lingshinx/nvim-config.git
