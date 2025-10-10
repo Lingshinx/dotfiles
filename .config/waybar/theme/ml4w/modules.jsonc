@@ -3,7 +3,6 @@
   "niri/workspaces": {
     "on-scroll-up": "niri msg action focus-column-left",
     "on-scroll-down": "niri msg action focus-column-right",
-    "all-outputs": true,
     // "format": "",
     "format-icons": {
       "1": "",
