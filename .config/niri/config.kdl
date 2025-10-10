@@ -11,7 +11,7 @@ input {
 
 output "HDMI-A-1" {
   mode "2560x1600@130"
-  scale 1.33
+  scale 1.50
   transform "270"
 }
 
@@ -258,6 +258,14 @@ binds {
 
   Mod+D { spawn "darkman" "toggle"; }
 
+  Mod+F1 { spawn "pamixer" "-d" "5"; }
+  Mod+F2 { spawn "pamixer" "-i" "5"; }
+  Mod+F3 { spawn "pamixer" "-t"; }
+  Mod+F5 { spawn "brightnessctl" "set" "5%-"; }
+  Mod+F6 { spawn "brightnessctl" "set" "5%+"; }
+  Mod+F7 { spawn "playerctl" "play-pause"; }
+  Mod+F8 { spawn "playerctl" "previous"; }
+  Mod+F9 { spawn "playerctl" "next"; }
 }
 
 animations {
