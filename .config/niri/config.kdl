@@ -165,6 +165,16 @@ binds {
   Mod+Shift+K     { move-column-to-workspace-up; }
   Mod+Shift+L     { move-column-right; }
 
+  Mod+Alt+H { focus-monitor-left; }
+  Mod+Alt+J { focus-workspace-down; }
+  Mod+Alt+K { focus-workspace-up; }
+  Mod+Alt+L { focus-monitor-right; }
+
+  Mod+Alt+Shift+H     { move-column-to-monitor-left; }
+  Mod+Alt+Shift+J     { move-column-to-workspace-down; }
+  Mod+Alt+Shift+K     { move-column-to-workspace-up; }
+  Mod+Alt+Shift+L     { move-column-to-monitor-right; }
+
   Mod+Ctrl+K    { move-window-up; }
   Mod+Ctrl+J  { move-window-down; }
   Mod+Ctrl+H  { consume-or-expel-window-left; }
