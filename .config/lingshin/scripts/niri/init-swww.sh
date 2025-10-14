@@ -1,6 +1,6 @@
 #!/bin/fish
 
-set monitors (niri msg --json focused-output | jq -r .name)
+set monitors (niri msg --json outputs | jq -r .[].name)
 set transparent ~/.config/lingshin/wallpaper/transparent.png
 
 if not pgrep -x swww-daemon >/dev/null
