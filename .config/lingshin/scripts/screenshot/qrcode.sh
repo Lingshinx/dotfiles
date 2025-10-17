@@ -1,7 +1,8 @@
 #!/bin/fish
 
 grim -g (slurp) (push)
-set output (string split : (zbarimg (top) -q))[2..]
+set output (string replace --regex ^QR-Code: '' (zbarimg -q (top)))
+echo $output
 if string match --quiet 'http*' -- "$output"
   firefox $output
 else if test -n "$output"
