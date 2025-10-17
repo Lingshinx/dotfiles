@@ -46,8 +46,8 @@ r = rotate_right
 Shift+r = rotate_left
 v = flip_horizontal
 Shift+v = flip_vertical
-p = exec realpath --relative-base $(pwd) %
-w = exec ~/.config/lingshin/scripts/swww/switch.sh %
+p = exec realpath --relative-base $(pwd) "%"
+w = exec ~/.config/lingshin/scripts/swww/switch.sh "%"
 Shift+plus = zoom +10
 Equal = zoom
 
@@ -56,6 +56,7 @@ h = step_left
 l = step_right
 k = step_up
 j = step_down
+p = exec realpath --relative-base $(pwd) "%"
 
 Ctrl+f = page_down
 Ctrl+b = page_up
