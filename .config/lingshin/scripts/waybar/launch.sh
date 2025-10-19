@@ -5,7 +5,7 @@ set dir ~/.config/waybar
 set cur_monitor (niri msg --json focused-output | jq -r .name)
 set way_monitor (jq -r .output < $dir/monitor.jsonc)
 
-not pkill waybar || not test $cur_monitor = $way_monitor && begin
+not pkill waybar || test $cur_monitor != $way_monitor && begin
   echo '{ "output": "'$cur_monitor'" }' >$dir/monitor.jsonc
 
   set theme (cat ~/.config/lingshin/settings/waybar/theme)
