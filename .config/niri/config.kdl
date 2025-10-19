@@ -165,12 +165,15 @@ binds {
   Mod+Shift+K      { move-column-to-workspace-up; }
   Mod+Shift+L      { move-column-right; }
 
+  // Super+[]
   Mod+BracketRight { focus-monitor-right; }
   Mod+BracketLeft  { focus-monitor-left; }
 
+  // Super+Shift+[]
   Mod+Shift+BracketRight { move-column-to-monitor-right; }
   Mod+Shift+BracketLeft  { move-column-to-monitor-left; }
 
+  // 更加有粒度地移动窗口，以形成上下布局
   Mod+Ctrl+K    { move-window-up; }
   Mod+Ctrl+J  { move-window-down; }
   Mod+Ctrl+H  { consume-or-expel-window-left; }
@@ -183,11 +186,13 @@ binds {
 
   Mod+Home repeat=false { focus-column-first; }
   Mod+End  repeat=false { focus-column-last; }
+
   Mod+WheelScrollDown           cooldown-ms=150 { focus-workspace-down; }
   Mod+WheelScrollUp             cooldown-ms=150 { focus-workspace-up; }
   Mod+Shift+WheelScrollUp       cooldown-ms=150 { focus-column-left; }
   Mod+Shift+WheelScrollDown     cooldown-ms=150 { focus-column-right; }
 
+  // 对于位于同列的窗口，切换堆式与栈式的显示方式
   Mod+G repeat=false { toggle-column-tabbed-display; }
 
   Mod+1 { focus-workspace 1; }
@@ -209,25 +214,30 @@ binds {
   Mod+Shift+8 { move-column-to-workspace 8; }
   Mod+Shift+9 { move-column-to-workspace 9; }
 
+  // 在 30% 50% 60% 的窗口宽度之间切换
   Mod+R { switch-preset-column-width; }
 
   Mod+F repeat=false { maximize-column; }
   Mod+Shift+F repeat=false { toggle-window-floating; }
-  Mod+Ctrl+F repeat=false {  fullscreen-window; }
-  Mod+Alt+F repeat=false {   toggle-windowed-fullscreen; }
+  Mod+Ctrl+F repeat=false { fullscreen-window; }
+  Mod+Alt+F repeat=false { toggle-windowed-fullscreen; }
 
   Mod+Tab repeat=false { switch-focus-between-floating-and-tiling; }
-  Mod+Shift+Tab repeat=false { 
+  Mod+Shift+Tab repeat=false {  // 总览模式
     spawn "~/.config/lingshin/scripts/niri/toggle-overview.sh"
   }
+
+  Mod+Q repeat=false { close-window; }
 
   Mod+T repeat=false       { spawn "kitty"; }
   Mod+Shift+T repeat=false { spawn "neovide" "--grid" "100x100"; }
   Mod+Return repeat=false   { spawn "kitty" "--class" "floating"; }
 
+  // 启动器
   Mod+Space repeat=false   { spawn-sh "pkill anyrun || anyrun"; }
   Mod+Shift+Space repeat=false   { spawn "~/.config/lingshin/scripts/rofi/launch.sh" "drawer"; }
 
+  // 切换状态栏
   Mod+Shift+N repeat=false   { spawn "~/.config/lingshin/scripts/waybar/launch.sh"; }
 
   Mod+B repeat=false        { spawn "firefox"; }
@@ -237,30 +247,36 @@ binds {
 
   Mod+Ctrl+G repeat=false { spawn "~/.config/lingshin/scripts/rofi/gamelauncher.fish"; }
 
-  Mod+Escape { spawn "wlogout"; }
-  Mod+Shift+Escape { spawn "hyprlock"; }
-  Mod+Ctrl+Escape { quit; }
 
+  Mod+Escape { spawn "wlogout"; }        // power menu
+  Mod+Shift+Escape { spawn "hyprlock"; } // 锁定屏幕
+  Mod+Ctrl+Escape { quit; }              // 退出桌面
+
+  // 剪切板
   Mod+Shift+V { spawn-sh "cliphist list | anyrun --show-results-immediately true --plugins libstdin.so | cliphist decode | wl-copy"; }
-
-  Mod+Q repeat=false { close-window; }
 
   Mod+Ctrl+C { center-visible-columns; }
 
+  // 区域/窗口/屏幕级截图
   Mod+S            { spawn "hyprshot" "-m active" "--m" "region" "--clipboard-only"; }
   Mod+Alt+S        { screenshot-screen; }
   Mod+Ctrl+S       { screenshot-window; }
 
+  // 加上 Shift 以编辑保存截图
   Mod+Shift+S      { spawn "~/.config/lingshin/scripts/screenshot/region.sh"; }
   Mod+Shift+Alt+S  { spawn "~/.config/lingshin/scripts/screenshot/output.sh"; }
   Mod+Shift+Ctrl+S { spawn "~/.config/lingshin/scripts/screenshot/window.sh"; }
 
+  // 扫描 QR-Code
   Mod+Alt+Ctrl+S   { spawn "~/.config/lingshin/scripts/screenshot/qrcode.sh"; }
 
+  // 拾取颜色
   Mod+Shift+C   { spawn "hyprpicker" "-a"; }
 
+  // 切换昼夜主题
   Mod+D { spawn "darkman" "toggle"; }
 
+  // 媒体控制
   Mod+F1 { spawn "pamixer" "-d" "5"; }
   Mod+F2 { spawn "pamixer" "-i" "5"; }
   Mod+F3 { spawn "pamixer" "-t"; }
