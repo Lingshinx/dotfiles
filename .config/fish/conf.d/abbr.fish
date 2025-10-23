@@ -1,9 +1,6 @@
 abbr -a ... -- ../..
 abbr -a .... -- ../../..
 
-abbr -a man -- tldr
-abbr -a tsdr -- man
-
 abbr -a plz -- sudo
 
 abbr -a ls -- lsd
