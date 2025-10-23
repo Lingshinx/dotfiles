@@ -274,7 +274,7 @@ binds {
   Mod+Shift+C   { spawn "hyprpicker" "-a"; }
 
   // 切换昼夜主题
-  Mod+D { spawn "darkman" "toggle"; }
+  Mod+D { spawn-sh "niri msg action do-screen-transition && darkman toggle"; }
 
   // 媒体控制
   Mod+F1 { spawn "pamixer" "-d" "5"; }
