@@ -71,8 +71,8 @@ layout {
   focus-ring {
     width 2
     active-gradient from="#33ccffee" to="#00ff99ee" angle=45
-    inactive-color "#000"
-    urgent-color "#9b0000"
+    inactive-color "#00000000"
+    urgent-color "#FF757F"
   }
   insert-hint {
     gradient from="#3355ff33" to="#00999933" angle=45
