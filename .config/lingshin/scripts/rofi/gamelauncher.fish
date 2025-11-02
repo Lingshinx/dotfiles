@@ -26,12 +26,12 @@ set games (
 )
 
 for game in $games
-    string split '|' $game | read --line name appid
+  string split '|' $game | read --line name appid
 
-    set image (fd $libraryThumbName --type file $steamThumb/$appid | head -1)
-    printf "%s\x00icon\x1f%s\n" $name $image
-end | rofi -dmenu \
-    -config $launcherConfig | read choosenGame
+  set image (fd $libraryThumbName --type file $steamThumb/$appid | head -1)
+  printf "%s\x00icon\x1f%s\n" $name $image
+end | rofi -dmenu -config $launcherConfig |
+      read choosenGame
 
 test -z "$choosenGame"
 and exit 1
