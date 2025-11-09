@@ -11,4 +11,8 @@ and set mode (default light < $cache)
 
 fd . $dir/$mode -x {}
 
-test "$mode" = light && echo night || echo light | tee $tmp > $cache
+begin
+  test "$mode" = light
+  and echo night
+  or echo light
+end | tee $tmp > $cache
