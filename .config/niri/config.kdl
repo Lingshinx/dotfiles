@@ -62,9 +62,21 @@ debug {
   honor-xdg-activation-with-invalid-serial
 }
 
+recent-windows {
+    // off
+    debounce-ms 750
 
+    open-delay-ms 250
 
+    highlight {
+        active-color "#c8d3f580"
+        urgent-color "#ff757f80"
+        padding 30
+        corner-radius 0
     }
 
+    previews {
+        max-height 480
+        max-scale 0.5
     }
 }
