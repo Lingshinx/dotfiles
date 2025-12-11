@@ -1,0 +1,33 @@
+environment {
+  XDG_CURRENT_DESKTOP "Niri"
+  XDG_SESSION_TYPE "wayland"
+  XDG_SESSION_DESKTOP "Niri"
+
+  // Cursor
+  HYPRCURSOR_THEME "Bibata-Modern-Ice"
+  HYPRCURSOR_SIZE "20"
+  XCURSOR_SIZE "20"
+  XCURSOR_THEME "Bibata-Modern-Ice"
+  XCURSOR_PATH " /usr/share/icons"
+
+  // QT
+  QT_QPA_PLATFORM "wayland;xcb"
+  QT_QPA_PLATFORMTHEME "qt6ct:qt5ct"
+  QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+  QT_AUTO_SCREEN_SCALE_FACTOR "1"
+  QT_STYLE_OVERRIDE "kvantum"
+
+  // GTK
+  GDK_SCALE "1"
+  GDK_BACKEND "wayland,x11,*"
+  SDL_VIDEODRIVER "wayland"
+  CLUTTER_BACKEND "wayland"
+
+  // ELECTRON
+  ELECTRON_OZONE_PLATFORM_HINT "auto"
+
+  // Fcitx
+  GTK_IM_MODULE "fcitx"
+  QT_IM_MODULE "fcitx"
+  XMODIFIERS "@im=fcitx"
+}

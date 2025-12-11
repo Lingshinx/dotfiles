@@ -1,0 +1,16 @@
+
+output "HDMI-A-1" {
+  mode "2560x1600@130"
+  scale 1.50
+  transform "270"
+
+  layout {
+    default-column-width { proportion 1.0; }
+  }
+}
+
+output "DP-2" {
+  mode "2560x1440@165"
+  scale 1.25
+  position x=0 y=0
+}

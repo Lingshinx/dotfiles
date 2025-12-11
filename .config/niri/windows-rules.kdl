@@ -1,0 +1,49 @@
+window-rule {
+  draw-border-with-background false
+  geometry-corner-radius 12
+  clip-to-geometry true
+}
+
+// blueberry
+window-rule {
+  match app-id=r#"^blueberry\.py$"#
+  open-floating true
+  default-column-width { fixed 400; }
+  default-window-height { fixed 600; }
+}
+
+// firefox
+window-rule {
+  match app-id="^firefox$"
+  open-maximized true
+}
+
+// swayimg
+window-rule {
+  match app-id="^swayimg$"
+  open-floating true
+  default-column-width {}
+  focus-ring {
+    off
+  }
+}
+
+// kitty
+window-rule {
+  match app-id="^floating$"
+  open-floating true
+  default-column-width { fixed 900; }
+  default-window-height { fixed 600; }
+}
+
+// steam 
+window-rule {
+  match app-id="^steam$" title="^好友列表$"
+  default-column-width { fixed 400; }
+}
+
+window-rule {
+  match app-id="^steam$" title=r#"^notificationtoast"#
+  default-floating-position x=0 y=0  relative-to="bottom-right"
+  open-focused false;
+}
