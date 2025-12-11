@@ -18,8 +18,11 @@
 @define-color color13 #a626a4;
 @define-color color14 #0997b3;
 @define-color color15 #fafafa;
+@define-color color16 #dc2f2f;
+@define-color color17 #ff9a3c;
 
 @define-color text @color0;
+@define-color textlight @color7;
 @define-color backgroundlight @color7;
 @define-color backgrounddark @color4;
 @define-color workspaces @color7;
@@ -40,5 +43,7 @@
 @define-color clock @color7;
 @define-color workspaces-border @text;
 @define-color active @color7;
+@define-color error @color16;
+@define-color warning @color17;
 
-@import './base.css';
+@import "./base.css";

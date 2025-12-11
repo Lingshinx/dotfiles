@@ -1,9 +1,33 @@
 {
-  // Workspaces
+  // Left
+  "custom/Arch": {
+    "format": "Arch",
+    "on-click": "niri msg action toggle-overview",
+    "on-click-right": "",
+    "on-click-middle": "niri msg pick-window | wl-copy",
+    "tooltip": false,
+    "always-on": true
+  },
+
+  "custom/wallpaper": {
+    "format": " ",
+    "tooltip": false,
+    "on-click": "~/.config/lingshin/scripts/swww/random.sh"
+  },
+
+  "niri/window": {
+    "on-click": "~/.config/lingshin/scripts/rofi/launch.sh drawer",
+    "on-click-right": "kitty",
+    "rewrite": {
+      "(.*) — Mozilla FireFox": "$1"
+    },
+    "max-length": 60
+  },
+
+  // Center
   "niri/workspaces": {
     "on-scroll-up": "niri msg action focus-column-left",
     "on-scroll-down": "niri msg action focus-column-right",
-    // "format": "",
     "format-icons": {
       "1": "",
       "2": "",
@@ -13,25 +37,8 @@
       "urgent": ""
     }
   },
-  // SubMap
-  "hyprland/submap": {
-    "default-submap": "Arch",
-    "on-click": "niri msg action toggle-overview",
-    "on-click-right": "",
-    "on-click-middle": "niri msg pick-window | wl-copy",
-    "tooltip": false,
-    "always-on": true
-  },
-  // Hyprland Window
-  "niri/window": {
-    "on-click": "~/.config/lingshin/scripts/rofi/launch.sh drawer",
-    "on-click-right": "kitty",
-    "rewrite": {
-      "(.*) — Mozilla FireFox": "$1"
-    },
-    "max-length": 60
-  },
-  // Updates Count
+
+  // Right
   "custom/updates": {
     "format": "{}",
     "escape": true,
@@ -41,122 +48,8 @@
     "interval": 1800,
     "exec-on-event": true
   },
-  // fortune
-  "custom/fortune": {
-    "format": " ",
-    "tooltip": false,
-    "on-click": "~/.config/lingshin/scripts/swww/random.sh"
-  },
-  // Power Menu
-  "custom/exit": {
-    "format": "",
-    "on-click": "wlogout",
-    "on-click-right": "XDG_CURRENT_DESKTOP=gnome gnome-control-center",
-    "tooltip-format": "Power Menu"
-  },
-  // System tray
-  "tray": {
-    "icon-size": 21,
-    "spacing": 10
-  },
-  // Clock
-  "clock": {
-    "format": "{:%H:%M - %a}",
-    "on-click": "swaync-client -t",
-    "timezone": "",
-    "tooltip": true,
-    "tooltip-format": "  {:%d %b}"
-  },
-  // System
-  "custom/system": {
-    "format": " ",
-    "on-click": "~/.config/lingshin/scripts/fortune/generate.sh",
-    "on-click-right": "~/.config/lingshin/scripts/fortune/record.sh",
-    "exec": "sleep 0.1 && ~/.config/lingshin/scripts/fortune/get.sh",
-    "return-type": "json",
-    "interval": "once",
-    "exec-on-event": true
-  },
-  // CPU
-  "cpu": {
-    "format": " {usage}%",
-    "interval": 3
-  },
-  // Memory
-  "memory": {
-    "format": "M {used:0.2f}G"
-  },
-  // Harddisc space used
-  "disk": {
-    "interval": 30,
-    "format": " {percentage_used}% ",
-    "path": "/"
-  },
-  "temperature": {
-    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
-    "critical-threshold": 40,
-    "format": "{icon} {temperatureC}°C",
-    "format-critical": "{temperatureC}°C!!",
-    "format-icons": [
-      "",
-      "",
-      "",
-      ""
-    ]
-  },
-  // Group Hardware
-  "group/hardware": {
-    "orientation": "inherit",
-    "drawer": {
-      "transition-duration": 300,
-      "children-class": "not-memory",
-      "transition-left-to-right": false
-    },
-    "modules": [
-      "custom/system",
-      "disk",
-      "cpu",
-      "memory",
-      "temperature"
-    ]
-  },
-  // Network
-  "network": {
-    "format": "{ifname}",
-    "format-wifi": "   {signalStrength}%",
-    "format-ethernet": "  {ifname}",
-    "format-disconnected": "⚠  Off",
-    "tooltip-format": " {ifname} via {gwaddri}",
-    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
-    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
-    "tooltip-format-disconnected": "󰪎 ",
-    "max-length": 50,
-    "on-click": "~/.config/lingshin/scripts/waybar/nm-applet.sh"
-  },
-  // Battery
-  "battery": {
-    "states": {
-      "good": 95,
-      "warning": 30,
-      "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-charging": "  {capacity}%",
-    "format-plugged": "  {capacity}%",
-    "format-alt": "{icon}  {time}",
-    // "format-good": "", // An empty format will hide the module
-    "format-full": "",
-    "format-icons": [
-      " ",
-      " ",
-      " ",
-      " ",
-      " "
-    ]
-  },
-  // Pulseaudio
+
   "pulseaudio": {
-    // "scroll-step": 1, // %, can be a float
     "format": "{icon}  {volume}%",
     "format-bluetooth": "{volume}% {icon} {format_source}",
     "format-bluetooth-muted": " {icon} {format_source}",
@@ -178,5 +71,112 @@
     },
     "on-click": "pamixer -t",
     "on-click-right": "blueberry"
+  },
+
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-full": "",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ]
+  },
+
+  "network": {
+    "format": "{ifname}",
+    "format-wifi": "   {signalStrength}%",
+    "format-ethernet": "  {ifname}",
+    "format-disconnected": "⚠  Off",
+    "tooltip-format": " {ifname} via {gwaddri}",
+    "tooltip-format-wifi": "  {ifname} @ {essid}\nIP: {ipaddr}\nStrength: {signalStrength}%\nFreq: {frequency}MHz\nUp: {bandwidthUpBits} Down: {bandwidthDownBits}",
+    "tooltip-format-ethernet": " {ifname}\nIP: {ipaddr}\n up: {bandwidthUpBits} down: {bandwidthDownBits}",
+    "tooltip-format-disconnected": "󰪎 ",
+    "max-length": 50,
+    "on-click": "~/.config/lingshin/scripts/waybar/nm-applet.sh"
+  },
+
+  "group/hardware": {
+    "orientation": "inherit",
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "not-memory",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/system",
+      "disk",
+      "cpu",
+      "memory",
+      "temperature"
+    ]
+  },
+
+  "custom/system": {
+    "format": " ",
+    "on-click": "~/.config/lingshin/scripts/fortune/generate.sh",
+    "on-click-right": "~/.config/lingshin/scripts/fortune/record.sh",
+    "exec": "sleep 0.1 && ~/.config/lingshin/scripts/fortune/get.sh",
+    "return-type": "json",
+    "interval": "once",
+    "exec-on-event": true
+  },
+
+  "disk": {
+    "interval": 30,
+    "format": " {percentage_used}% ",
+    "path": "/"
+  },
+
+  "cpu": {
+    "format": " {usage}%",
+    "interval": 3
+  },
+
+  "memory": {
+    "format": "M {used:0.2f}G"
+  },
+
+  "temperature": {
+    "hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+    "critical-threshold": 40,
+    "format": "{icon} {temperatureC}°C",
+    "format-critical": "{temperatureC}°C!!",
+    "format-icons": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10
+  },
+
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout",
+    "on-click-right": "niri msg action close-overview",
+    "tooltip-format": "Power Menu"
+  },
+
+  "clock": {
+    "format": "{:%H:%M - %a}",
+    "on-click": "swaync-client -t",
+    "timezone": "",
+    "tooltip": true,
+    "tooltip-format": "  {:%d %b}"
   }
 }

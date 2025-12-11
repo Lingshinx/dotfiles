@@ -10,8 +10,8 @@
     "~/.config/waybar/monitor.jsonc"
   ],
   "modules-left": [
-    "hyprland/submap",
-    "custom/fortune",
+    "custom/Arch",
+    "custom/wallpaper",
     "niri/window"
   ],
   "modules-center": [
