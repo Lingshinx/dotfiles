@@ -1,7 +1,3 @@
-@define-color foreground #383a42;
-@define-color background #fafafa;
-@define-color cursor #a3b3cc;
-
 @define-color color0 #383a42;
 @define-color color1 #0184bc;
 @define-color color2 #50a14f;
@@ -21,27 +17,20 @@
 @define-color color16 #dc2f2f;
 @define-color color17 #ff9a3c;
 
-@define-color text @color0;
+@define-color text @color14;
 @define-color textlight @color7;
-@define-color backgroundlight @color7;
-@define-color backgrounddark @color4;
+@define-color background @color7;
+@define-color background_stress @color4;
 @define-color workspaces @color7;
 @define-color workspacesbackground1 @color7;
 @define-color workspacesbackground2 @color6;
 @define-color workspacesbackground_urgent @color9;
 @define-color bordercolor @color7;
-@define-color textcolor1 @color7;
-@define-color textcolor2 @color14;
-@define-color textcolor3 @color7;
 @define-color iconcolor @color7;
-@define-color audio @color5;
-@define-color audio-b @color7;
+@define-color audio @color14;
 @define-color window @color2;
 @define-color network @color1;
-@define-color network-b @color7;
-@define-color exit @color7;
 @define-color clock @color7;
-@define-color workspaces-border @text;
 @define-color active @color7;
 @define-color error @color16;
 @define-color warning @color17;

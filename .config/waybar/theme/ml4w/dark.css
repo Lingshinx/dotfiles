@@ -12,7 +12,7 @@
 @define-color sapphire #7dc4e4;
 @define-color blue #8aadf4;
 @define-color lavender #b7bdf8;
-@define-color text #cad3f5;
+@define-color white #cad3f5;
 @define-color subtext1 #b8c0e0;
 @define-color subtext0 #a5adcb;
 @define-color overlay2 #939ab7;
@@ -24,25 +24,24 @@
 @define-color base #24273a;
 @define-color mantle #1e2030;
 @define-color crust #181926;
+@define-color color17 #ff9a3c;
 
+@define-color text @white;
+@define-color textlight white;
+@define-color background @crust;
+@define-color background_stress @base;
+@define-color workspaces @base;
 @define-color workspacesbackground1 @base;
 @define-color workspacesbackground2 @text;
 @define-color workspacesbackground_urgent @maroon;
-@define-color workspaces @base;
-@define-color iconcolor @text;
-@define-color backgroundlight @base;
-@define-color backgrounddark @crust;
-@define-color audio @lavender;
-@define-color audio-b @base;
-@define-color network @sky;
-@define-color network-b @base;
-@define-color exit @text;
-@define-color exit-b @base;
-@define-color window @green;
 @define-color bordercolor @text;
+@define-color iconcolor @text;
+@define-color audio @lavender;
+@define-color window @green;
+@define-color network @sky;
 @define-color clock @blue;
 @define-color active @base;
-@define-color textcolor1 @text;
-@define-color textcolor2 @teal;
+@define-color error @red;
+@define-color warning @color17;
 
-@import './base.css';
+@import "./base.css";

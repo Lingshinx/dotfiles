@@ -16,8 +16,8 @@ window#waybar {
  * ----------------------------------------------------- */
 
 tooltip {
-  color: @textcolor2;
-  background-color: @backgroundlight;
+  color: @text;
+  background-color: @background;
   opacity: 0.9;
 
   border-radius: 16px;
@@ -29,8 +29,8 @@ tooltip {
  * ----------------------------------------------------- */
 
 #custom-Arch {
-  color: @textcolor1;
-  background-color: @backgrounddark;
+  color: @textlight;
+  background-color: @background_stress;
   opacity: 0.8;
 
   margin: 3px 17px 3px 0px;
@@ -63,7 +63,7 @@ tooltip {
 
 #window {
   color: @window;
-  background: @backgroundlight;
+  background: @background;
   opacity: 0.8;
 
   margin: 5px 15px 5px 0px;
@@ -112,7 +112,6 @@ tooltip {
 }
 
 #workspaces button.active {
-  color: @active;
   min-width: 40px;
   opacity: 1;
 }
@@ -141,8 +140,8 @@ tooltip {
 }
 
 #custom-updates.green {
-  color: @textcolor2;
-  background-color: @backgroundlight;
+  color: @text;
+  background-color: @background;
 }
 
 #custom-updates.yellow {
@@ -161,7 +160,7 @@ tooltip {
 
 #pulseaudio {
   color: @audio;
-  background-color: @audio-b;
+  background-color: @background;
   opacity: 0.8;
 
   margin: 5px 15px 5px 0px;
@@ -172,8 +171,8 @@ tooltip {
 }
 
 #pulseaudio.muted {
-  background-color: @backgrounddark;
-  color: @textcolor1;
+  color: @textlight;
+  background-color: @background_stress;
 }
 
 /* -----------------------------------------------------
@@ -181,8 +180,8 @@ tooltip {
  * ----------------------------------------------------- */
 
 #battery {
-  color: @textcolor2;
-  background-color: @backgroundlight;
+  color: @text;
+  background-color: @background;
   opacity: 0.8;
 
   margin: 5px 15px 5px 0px;
@@ -194,20 +193,20 @@ tooltip {
 
 #battery.charging,
 #battery.plugged {
-  color: @textcolor2;
-  background-color: @backgroundlight;
+  color: @text;
+  background-color: @background;
 }
 
 @keyframes blink {
   to {
-    background-color: @backgroundlight;
-    color: @textcolor2;
+    background-color: @background;
+    color: @text;
   }
 }
 
 #battery.critical:not(.charging) {
   background-color: @warning;
-  color: @textcolor3;
+  color: @text;
   animation-name: blink;
   animation-duration: 0.5s;
   animation-timing-function: linear;
@@ -221,7 +220,7 @@ tooltip {
 
 #network {
   color: @network;
-  background-color: @network-b;
+  background-color: @background;
   opacity: 0.8;
 
   margin: 5px 15px 5px 0px;
@@ -281,7 +280,7 @@ tooltip {
  * ----------------------------------------------------- */
 
 #custom-exit {
-  color: @exit;
+  color: @iconcolor;
   opacity: 0.8;
 
   margin: 0px 22px 0px 0px;
@@ -295,8 +294,8 @@ tooltip {
  * ----------------------------------------------------- */
 
 #clock {
-  color: @clock;
-  background-color: @backgrounddark;
+  color: @textlight;
+  background-color: @background_stress;
   border: 3px solid @bordercolor;
 
   border-radius: 15px;
