@@ -74,7 +74,7 @@ binds {
   Mod+Q repeat=false { close-window; }
 
   Mod+T repeat=false       { spawn "kitty"; }
-  Mod+Shift+T repeat=false { spawn "neovide" "--grid" "100x100"; }
+  Mod+Shift+T repeat=false { spawn "neovide"; }
   Mod+Return repeat=false   { spawn "kitty" "--class" "floating"; }
 
   // 启动器
