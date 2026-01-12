@@ -3,9 +3,10 @@ abbr -a .... -- ../../..
 
 abbr -a plz -- sudo
 
-abbr -a ls -- lsd
-abbr -a la -- lsd -a
-abbr -a ll -- lsd -l
-abbr -a tree -- lsd --tree --depth=2
+abbr -a cat -- bat
+
+abbr -a la -- ls -a
+abbr -a ll -- ls -l
+abbr -a tree -- ls --tree --level 2
 
 abbr -a rm -- gomi
