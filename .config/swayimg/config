@@ -13,6 +13,7 @@ preload = yes
 background = #09101f
 select = #111034
 border_color = #111034
+pstore = yes
 
 [font]
 name = Noto Sans CJK SC
