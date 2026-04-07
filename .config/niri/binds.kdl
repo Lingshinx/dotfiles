@@ -73,7 +73,7 @@ binds {
 
   Mod+Q repeat=false { close-window; }
 
-  Mod+T repeat=false       { spawn "kitty"; }
+  Mod+T repeat=false       { spawn "kitty" "--single-instance"; }
   Mod+Shift+T repeat=false { spawn "neovide"; }
   Mod+Return repeat=false   { spawn "kitty" "--class" "floating"; }
 
