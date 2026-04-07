@@ -7,6 +7,13 @@ include "binds.kdl"
 
 input {
   focus-follows-mouse max-scroll-amount="40%"
+
+  touchpad {
+    natural-scroll
+    tap
+    drag true
+    drag-lock
+  }
 }
 
 cursor {
