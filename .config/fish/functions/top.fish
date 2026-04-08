@@ -26,7 +26,7 @@ function top
           sed -n (math (wc -l $stackfile | choose 0) +1 -$start)p $stackfile
           return
         end
-        set end (default '$' $end)
+        set end (default $end '$')
         tac $stackfile | sed -n "$start,$end"p
         continue
       end
