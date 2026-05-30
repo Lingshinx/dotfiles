@@ -1,0 +1,5 @@
+ls
+help
+help lls
+help ls
+exit
