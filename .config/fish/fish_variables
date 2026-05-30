@@ -8,5 +8,6 @@ SETUVAR FZF_PREVIEW_FILE_CMD:head\x20\x2dn\x2010
 SETUVAR FZF_TMUX_HEIGHT:40\x25
 SETUVAR __fish_initialized:4300
 SETUVAR __fish_webconfig_theme_notification:set\x2dtheme\x2dv1\x2d\x231
+SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR fish_greeting:\x1d
 SETUVAR fish_user_paths:/home/lingshin/\x2enix\x2dprofile/bin\x1e/home/lingshin/\x2eghcup/bin\x1e/home/lingshin/\x2elocal/bin
