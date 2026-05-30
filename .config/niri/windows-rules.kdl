@@ -2,6 +2,9 @@ window-rule {
   draw-border-with-background false
   geometry-corner-radius 12
   clip-to-geometry true
+  background-effect {
+    xray false
+  }
 }
 
 // blueberry
@@ -36,7 +39,16 @@ window-rule {
   default-window-height { fixed 600; }
 }
 
-// steam 
+// neovide
+window-rule {
+  match app-id="^neovide$"
+  background-effect {
+    blur true
+    xray false
+  }
+}
+
+// steam
 window-rule {
   match app-id="^steam$" title="^好友列表$"
   default-column-width { fixed 400; }
@@ -46,4 +58,10 @@ window-rule {
   match app-id="^steam$" title=r#"^notificationtoast"#
   default-floating-position x=0 y=0  relative-to="bottom-right"
   open-focused false;
+}
+
+// satty
+window-rule {
+  match app-id="^com.gabm.satty$"
+  open-floating true
 }

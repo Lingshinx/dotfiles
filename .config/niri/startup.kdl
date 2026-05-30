@@ -1,6 +1,4 @@
-spawn-at-startup "~/.config/lingshin/scripts/waybar/launch.sh";
-spawn-at-startup "~/.config/lingshin/scripts/niri/init-swww.sh";
+spawn-at-startup "dms" "run" "-c" ".config/quickshell";
 spawn-at-startup "wl-paste" "--type" "image" "--watch" "cliphist" "store";
 spawn-at-startup "wl-paste" "--type" "text" "--watch" "cliphist" "store";
-spawn-at-startup "hypridle"
 

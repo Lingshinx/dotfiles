@@ -77,27 +77,30 @@ binds {
   Mod+Shift+T repeat=false { spawn "neovide"; }
   Mod+Return repeat=false   { spawn "kitty" "--class" "floating"; }
 
+  Mod+A repeat=false   { spawn "dms" "ipc" "call" "dash" "toggle" "overview"; }
   // 启动器
-  Mod+Space repeat=false   { spawn-sh "pkill anyrun || anyrun"; }
+  Mod+Space repeat=false   { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
   Mod+Shift+Space repeat=false   { spawn "~/.config/lingshin/scripts/rofi/launch.sh" "drawer"; }
 
   // 切换状态栏
-  Mod+Shift+N repeat=false   { spawn "~/.config/lingshin/scripts/waybar/launch.sh"; }
+  Mod+Shift+N repeat=false   { spawn "dms" "ipc" "call" "bar" "toggleFocusedScreen" "index" "0"; }
+
+  // 通知中心
+  Mod+N repeat=false   { spawn "dms" "ipc" "call" "notifications" "toggle"; }
 
   Mod+B repeat=false        { spawn "firefox"; }
-  Mod+I repeat=false        { spawn-sh "XDG_CURRENT_DESKTOP=gnome gnome-control-center"; }
+  Mod+I repeat=false        { spawn "dms" "ipc" "call" "settings" "focusOrToggle"; }
   Mod+E repeat=false        { spawn "nautilus"; }
   Mod+Shift+E repeat=false  { spawn "kitty" "yazi"; }
 
   Mod+Ctrl+G repeat=false { spawn "~/.config/lingshin/scripts/rofi/gamelauncher.fish"; }
 
-
-  Mod+Escape { spawn "wlogout"; }        // power menu
-  Mod+Shift+Escape { spawn "hyprlock"; } // 锁定屏幕
+  Mod+Escape repeat=false { spawn "dms" "ipc" "call" "powermenu" "toggle"; }        // power menu
+  Mod+Shift+Escape repeat=false { spawn "dms" "ipc" "call" "lock" "lock"; } // 锁定屏幕
   Mod+Ctrl+Escape { quit; }              // 退出桌面
 
   // 剪切板
-  Mod+Shift+V { spawn-sh "cliphist list | anyrun --show-results-immediately true --plugins libstdin.so | cliphist decode | wl-copy"; }
+  Mod+Shift+V repeat=false { spawn "dms" "ipc" "call" "clipboard" "toggle"; }
 
   Mod+Ctrl+C { center-visible-columns; }
 
@@ -115,20 +118,18 @@ binds {
   Mod+Alt+Ctrl+S   { spawn "~/.config/lingshin/scripts/screenshot/qrcode.sh"; }
 
   // 拾取颜色
-  Mod+Shift+C   { spawn "hyprpicker" "-a"; }
+  Mod+Shift+C   { spawn "dms" "color" "pick" "-a"; }
 
   // 切换昼夜主题
-  Mod+D { spawn-sh "niri msg action do-screen-transition && ~/.config/lingshin/scripts/xight/toggle.fish"; }
+  Mod+D { spawn "dms" "ipc" "call" "theme" "toggle"; }
 
   // 媒体控制
-  Mod+F1 { spawn "pamixer" "-d" "5"; }
-  Mod+F2 { spawn "pamixer" "-i" "5"; }
-  Mod+F3 { spawn "pamixer" "-t"; }
-  Mod+F5 { spawn "brightnessctl" "set" "5%-"; }
-  Mod+F6 { spawn "brightnessctl" "set" "5%+"; }
-  Mod+F7 { spawn "playerctl" "play-pause"; }
-  Mod+F8 { spawn "playerctl" "previous"; }
-  Mod+F9 { spawn "playerctl" "next"; }
+  Mod+F1 allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
+  Mod+F2 allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "increment" "3"; }
+  Mod+F3 allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "mute"; }
+  Mod+F7 allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "previous"; }
+  Mod+F8 allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "next"; }
+  Mod+F9 allow-when-locked=true { spawn "dms" "ipc" "call" "mpris" "playPause"; }
 }
 
 recent-windows {
