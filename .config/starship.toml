@@ -194,3 +194,11 @@ symbol = " "
 
 [gradle]
 symbol = " "
+
+[custom.shpool]
+style = "bold cyan"
+symbol = "󰓣 "
+command = "echo $SHPOOL_SESSION_NAME"
+when = "set -q SHPOOL_SESSION_NAME"
+shell = ["fish", "--no-config"]
+format = 'via [$symbol($output)]($style) '
