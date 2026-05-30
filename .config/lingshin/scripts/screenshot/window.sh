@@ -1,4 +1,15 @@
-at=$(hyprctl activewindow -j | jq '.at' | tr '\n,' ' ' | awk '{print $2","$3}')
-size=$(hyprctl activewindow -j | jq '.size' | tr '\n,' ' ' | awk '{print $2"x"$3}')
+#!/usr/bin/env -S nu -n --no-std-lib
 
-grim -g "$at $size" -t ppm - | satty --filename - --output-filename "$HOME/Pictures/Screenshot/satty-$(date '+%Y%m%d-%H:%M:%S').png" --copy-command=wl-copy
+def main [] {
+  let temp = mktemp
+  ^niri msg action screenshot-window --path $temp
+  ^inotifywait --event close --timeout 2 $temp
+  if $env.LAST_EXIT_CODE == 0 and (^wl-paste -l | lines | any {|it| $it =~ "^image/"}) {
+    ^wl-paste
+    | (^satty
+      --resize smart
+      --filename -
+      --output-filename ~/Pictures/Screenshot/satty-(date now | format date '%Y%m%d-%H:%M:%S').png
+      --copy-command=wl-copy)
+  }
+}
