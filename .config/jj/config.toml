@@ -1,0 +1,9 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "Lingshin"
+email = "yokaringx@outlook.com"
+
+[ui]
+default-command = "log"
+merge-editor = ":builtin"
