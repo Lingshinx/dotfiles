@@ -2,7 +2,7 @@
 
 def main [] {
   ^grim -g (^slurp) -
-  | zbarimg -q - 
+  | ^zbarimg -q -
   | str replace --regex "^QR-Code:" ""
   | let result
   if $result =~ "^https?://" {
