@@ -5,6 +5,7 @@ $env.config.table.abbreviated_row_count = 15
 $env.config.table.header_on_separator = true
 $env.config.table.index_mode = "auto"
 $env.config.table.trim.methodology = "truncating"
+$env.config.table.trim.truncating_suffix = "…"
 $env.config.table.missing_value_symbol = "󰟢"
 
 $env.config.hooks.display_output = {
