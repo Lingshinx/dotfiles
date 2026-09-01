@@ -25,7 +25,7 @@ export def status [
   | insert status {|it| if $it.Online { $"(ansi green)Online(ansi reset)" } else { $it.LastSeen | date humanize }}
   | insert ip { get TailscaleIPs.0 }
   | insert name { get DNSName | split row . | first }
-  | rename --block { str downcase }
+  | rename --block { str lowercase }
   | if $long {
     $in
   } else {
