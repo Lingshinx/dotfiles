@@ -1,4 +1,4 @@
-let commands_completed_by_fish = [nu git niri tailscale]
+let commands_completed_by_fish = [nu git niri tailscale yay wpctl]
 
 let carapace_completer = {|spans|
     CARAPACE_LENIENT=1 carapace $spans.0 nushell ...$spans | from json
@@ -29,4 +29,4 @@ let external_completer = {|spans|
 
 $env.config.completions.algorithm = "substring"
 $env.config.completions.external.enable = true
-$env.config.completions.external.completer = $external_completer
+$env.config.completions.external.completer = $fish_completer
