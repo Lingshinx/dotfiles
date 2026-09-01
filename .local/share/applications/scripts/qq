@@ -1,18 +1,25 @@
-#!/bin/fish
+#!/usr/bin/env -S nu -n --no-std-lib
 
-set items "$(busctl --user \
-  get-property org.kde.StatusNotifierWatcher \
-  /StatusNotifierWatcher \
-  org.kde.StatusNotifierWatcher \
-  RegisteredStatusNotifierItems | sed 's/as [0-9]\+ //g' | tr -d '"' | tr ' ' '\n' | choose -f / 0)"
+def main [] {
+  let items = (^busctl --user
+    get-property
+    org.kde.StatusNotifierWatcher
+    /StatusNotifierWatcher
+    org.kde.StatusNotifierWatcher
+    RegisteredStatusNotifierItems)
+  | str replace --regex '^as \d ' ''
+  | split row --regex '\s+'
+  | str replace --regex --all '^"|"$' ''
+  | each { split row '/' | get 0 }
 
-set qqs "$(busctl --user list | rg qq | choose 0)"
+  let users = ^busctl --user list
+  | detect columns
+  | where PROCESS == qq | get NAME
 
-set dest (comm -12 (echo "$qqs" | sort | push) (echo "$items" | sort | push))
-
-if test -z "$dest"
-  /bin/linuxqq --ozone-platform-hint=x11
-  return
-end
-
-busctl --user call "$dest" /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0
+  let dest = $items | intersect $users
+  if ($dest | is-empty) {
+    /bin/linuxqq
+  } else {
+    ^busctl --user call ...$dest /StatusNotifierItem org.kde.StatusNotifierItem Activate ii 0 0
+  }
+}
