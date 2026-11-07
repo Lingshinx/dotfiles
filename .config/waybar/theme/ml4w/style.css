@@ -5,7 +5,6 @@
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.8);
   border-bottom: 0px;
   background: transparent;
   transition-duration: 0.5s;
@@ -99,7 +98,7 @@ tooltip {
 
 #workspaces button {
   color: @workspaces;
-  background-color: @workspacesbackground2;
+  background: @workspacesbackground2;
   opacity: 0.4;
 
   margin: 4px 3px;
