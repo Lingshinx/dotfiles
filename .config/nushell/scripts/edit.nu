@@ -59,7 +59,7 @@ export def app [
     | lines
     | where $it =~ "^Name="
     | str replace --regex '^Name=' ''
-    | any {|it| if ($pattern | describe ) == "closure" { do $pattern $it } else if $regex { $it =~ $pattern } else { $it == $pattern }}
+    | any {|it| if ($pattern | describe) == "closure" { do $pattern $it } else if $regex { $it =~ $pattern } else { $it == $pattern }}
   } | let desktops
   if ($desktops | is-not-empty) {
     if $all {
