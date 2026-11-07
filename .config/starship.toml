@@ -1,3 +1,5 @@
+format = "$username$hostname$localip$shlvl$directory${custom.jj}$all\n"
+
 [hostname]
 ssh_symbol = "󰖟 "
 format = '[$ssh_symbol](blue)[$hostname]($style) in '
@@ -10,8 +12,38 @@ format = "[$user](bold underline red) "
 format = '[  $path]($style)[$read_only]($read_only_style) '
 read_only = "󰌾 "
 
+[custom.jj]
+when = "jj-starship detect"
+shell = ["jj-starship"]
+format = "$output "
+
+[git_branch]
+disabled = true
+
+[git_commit]
+disabled = true
+
+[git_state]
+disabled = true
+
+[git_metrics]
+disabled = true
+
+[git_status]
+disabled = true
+
 [aws]
-symbol = "  "
+symbol = " "
+
+[azure]
+symbol = " "
+
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+unknown_symbol = "󰂑 "
+empty_symbol = "󰂎 "
 
 [buf]
 symbol = " "
@@ -28,20 +60,32 @@ symbol = " "
 [cmake]
 symbol = " "
 
+[cobol]
+symbol = " "
+
 [conda]
-symbol = " "
+symbol = " "
+
+[container]
+symbol = " "
 
 [crystal]
 symbol = " "
 
 [dart]
-symbol = " "
+symbol = " "
 
 [deno]
 symbol = " "
 
+[direnv]
+symbol = " "
+
 [docker_context]
 symbol = " "
+
+[dotnet]
+symbol = " "
 
 [elixir]
 symbol = " "
@@ -49,23 +93,29 @@ symbol = " "
 [elm]
 symbol = " "
 
+[erlang]
+symbol = " "
+
 [fennel]
 symbol = " "
+
+[fortran]
+symbol = " "
 
 [fossil_branch]
 symbol = " "
 
 [gcloud]
-symbol = "  "
+symbol = "󱇶 "
 
-[git_branch]
-symbol = " "
-
-[git_commit]
-tag_symbol = '  '
+[gleam]
+symbol = " "
 
 [golang]
 symbol = " "
+
+[gradle]
+symbol = " "
 
 [guix_shell]
 symbol = " "
@@ -76,11 +126,17 @@ symbol = " "
 [haxe]
 symbol = " "
 
+[helm]
+symbol = " "
+
 [hg_branch]
 symbol = " "
 
 [java]
-symbol = " "
+symbol = " "
+
+[jj_bookmark]
+symbol = " "
 
 [julia]
 symbol = " "
@@ -88,8 +144,14 @@ symbol = " "
 [kotlin]
 symbol = " "
 
+[kubernetes]
+symbol = "󱃾 "
+
 [lua]
 symbol = " "
+
+[maven]
+symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
@@ -97,8 +159,17 @@ symbol = "󰍛 "
 [meson]
 symbol = "󰔷 "
 
+[mojo]
+symbol = "󰈸 "
+
+[nats]
+symbol = " "
+
+[netns]
+symbol = "󰛳 "
+
 [nim]
-symbol = "󰆥 "
+symbol = " "
 
 [nix_shell]
 symbol = " "
@@ -109,27 +180,46 @@ symbol = " "
 [ocaml]
 symbol = " "
 
+[odin]
+symbol = "󰟢 "
+
+[opa]
+symbol = " "
+
+[openstack]
+symbol = " "
+
 [os.symbols]
+AIX = " "
+AlmaLinux = " "
 Alpaquita = " "
 Alpine = " "
-AlmaLinux = " "
+ALTLinux = " "
 Amazon = " "
 Android = " "
+AOSC = " "
 Arch = " "
 Artix = " "
+Bazzite = " "
+Bluefin = " "
 CachyOS = " "
 CentOS = " "
 Debian = " "
 DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
+Elementary = " "
+Emscripten = " "
+EndeavourOS = " "
 Fedora = " "
 FreeBSD = " "
-Garuda = "󰛓 "
+Garuda = " "
 Gentoo = " "
 HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
+Hurd = " "
+Illumos = " "
+InstantOS = " "
+Ios = "󰀷 "
 Kali = " "
+KDENeon = " "
 Linux = " "
 Mabox = " "
 Macos = " "
@@ -140,21 +230,27 @@ Mint = " "
 NetBSD = " "
 NixOS = " "
 Nobara = " "
-OpenBSD = "󰈺 "
+OpenBSD = " "
+OpenCloudOS = " "
+openEuler = " "
 openSUSE = " "
-OracleLinux = "󰌷 "
+OracleLinux = "󰺡 "
+PikaOS = " "
 Pop = " "
 Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
+Redhat = "󱄛 "
+RedHatEnterprise = "󱄛 "
 Redox = "󰀘 "
-Solus = "󰠳 "
+RockyLinux = " "
+Solus = " "
 SUSE = " "
 Ubuntu = " "
+Ultramarine = " "
 Unknown = " "
+Uos = " "
 Void = " "
 Windows = "󰍲 "
+Zorin = " "
 
 [package]
 symbol = "󰏗 "
@@ -171,8 +267,20 @@ symbol = " "
 [pixi]
 symbol = "󰏗 "
 
+[pulumi]
+symbol = " "
+
+[purescript]
+symbol = " "
+
 [python]
 symbol = " "
+
+[raku]
+symbol = "󱖊 "
+
+[red]
+symbol = "󱍼 "
 
 [rlang]
 symbol = "󰟔 "
@@ -186,14 +294,44 @@ symbol = "󱘗 "
 [scala]
 symbol = " "
 
+[shlvl]
+symbol = "󰹍 "
+
+[singularity]
+symbol = " "
+
+[solidity]
+symbol = " "
+
+[spack]
+symbol = " "
+
+[status]
+symbol = " "
+
+[sudo]
+symbol = " "
+
 [swift]
 symbol = " "
 
+[terraform]
+symbol = " "
+
+[vlang]
+symbol = " "
+
+[typst]
+symbol = " "
+
+[vagrant]
+symbol = " "
+
+[xmake]
+symbol = " "
+
 [zig]
 symbol = " "
-
-[gradle]
-symbol = " "
 
 [custom.shpool]
 style = "bold cyan"
