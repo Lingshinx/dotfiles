@@ -333,7 +333,7 @@ export def play [
       current
     } else {
       get-episode $count
-    }
+    } | default { err "the episode doesn't exist" }
     let config = config
     let player = $player | default { $config.player }
     let cmd = $config.players | get --optional $player
