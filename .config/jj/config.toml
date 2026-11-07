@@ -25,3 +25,9 @@ concat(
   stringify(diff.git()).split("\ndiff --git", 4).take(3).map(|file| file.lines().take(15).join("\n")).join("\n\ndiff --git"),
 )
 '''
+
+[aliases.index-split]
+definition = ["split", '--config=ui.diff-editor=["fish", "-c", "git diff | patch -R -d $right"]']
+
+doc = "Git index as splitter"
+
