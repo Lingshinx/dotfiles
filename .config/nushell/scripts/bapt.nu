@@ -290,8 +290,8 @@ export def status [
 }
 
 # Give alias to a series
-@example "Give aliases to \"yakuya no hitorigoto\"" { bapt alias "yakuya no hitorigoto" yakuya maomao }
-export def alias [
+@example "Give aliases to \"yakuya no hitorigoto\"" { bapt add-name "yakuya no hitorigoto" yakuya maomao }
+export def add-name [
   --dir (-d): directory = ""  # Set path of recorded data
   --force (-f)                # Remove existing alias
   series: string@series-names # Series to be given alias
