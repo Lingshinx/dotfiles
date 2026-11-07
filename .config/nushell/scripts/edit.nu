@@ -52,7 +52,7 @@ export def app [
   --all (-a) # edit all desktop entries instead first found
   pattern: any
 ] {
-  ls ~/.local/share/applications/*.desktop /usr/share/applications/*.desktop 
+  ls ($env.XDG_DATA_DIRS | default ($env.HOME)/.local/share)/applications/*.desktop /usr/share/applications/*.desktop
   | get name
   | where {|it|
     open $it
