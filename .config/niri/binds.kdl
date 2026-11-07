@@ -121,7 +121,7 @@ binds {
   Mod+Shift+C   { spawn "dms" "color" "pick" "-a"; }
 
   // 切换昼夜主题
-  Mod+D { spawn "dms" "ipc" "call" "theme" "toggle"; }
+  Mod+D { spawn "~/.config/lingshin/scripts/xight/toggle.fish"; }
 
   // 媒体控制
   Mod+F1 allow-when-locked=true { spawn "dms" "ipc" "call" "audio" "decrement" "3"; }
